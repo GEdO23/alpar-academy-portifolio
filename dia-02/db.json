@@ -1,0 +1,71 @@
+{
+    "horarios": {
+        "segunda": {
+            "manha": {
+                "inicio": "08:00",
+                "fim": "12:00"
+            },
+            "tarde": {
+                "inicio": "14:00",
+                "fim": "18:00"
+            },
+            "isAberto": true
+        },
+        "terca": {
+            "manha": {},
+            "tarde": {},
+            "isAberto": false
+        },
+        "quarta": {
+            "manha": {
+                "inicio": "08:00",
+                "fim": "12:00"
+            },
+            "tarde": {
+                "inicio": "14:00",
+                "fim": "18:00"
+            },
+            "isAberto": true
+        },
+        "quinta": {
+            "manha": {
+                "inicio": "08:00",
+                "fim": "12:00"
+            },
+            "tarde": {
+                "inicio": "14:00",
+                "fim": "18:00"
+            },
+            "isAberto": true
+        },
+        "sexta": {
+            "manha": {
+                "inicio": "08:00",
+                "fim": "12:00"
+            },
+            "tarde": {
+                "inicio": "14:00",
+                "fim": "18:00"
+            },
+            "isAberto": true
+        },
+        "sabado": {
+            "manha": {
+                "inicio": "08:00",
+                "fim": "12:00"
+            },
+            "tarde": {
+                "inicio": "14:00",
+                "fim": "18:00"
+            },
+            "isAberto": true
+        },
+        "domingoEFeriados": {
+            "manha": {
+                "inicio": "08:00",
+                "fim": "12:00"
+            },
+            "isAberto": true
+        }
+    }
+}
