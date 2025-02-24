@@ -12,7 +12,14 @@
  *  "domingoEFeriados": periodoDiario
  * }} horarios 
  * 
- * @typedef {{"horarios": horarios}} dbJson
+ * @typedef {{"nome": string, "ingredientes": Array.<string>}} cardapioItem
+ * @typedef {{
+ *  "bebidas": Array.<cardapioItem>, 
+ *  "salgados": Array.<cardapioItem>, 
+ *  "doces": Array.<cardapioItem>
+ * }} cardapio
+ * 
+ * @typedef {{"horarios": horarios, "cardapio": cardapio}} dbJson
  * @typedef {{"tdManha": HTMLTableCellElement, "tdTarde": HTMLTableCellElement?}} tableData
  */
 
@@ -24,14 +31,17 @@ async function fetchData() {
             /**
              * @param {dbJson} json 
              */
-            (json) => assignHorarios(json.horarios)
+            (json) => {
+                setDataHorarios(json.horarios)
+                setDataCardapio(json.cardapio)
+            }
         )
 }
 
 /**
  * @param {horarios} horarios 
  */
-function assignHorarios(horarios) {
+function setDataHorarios(horarios) {
     const trManha = document.querySelector('#trHorariosManha')
     const trTarde = document.querySelector('#trHorariosTarde')
 
@@ -79,6 +89,53 @@ function assignHorarios(horarios) {
     appendHorariosDoDia(trManha, trTarde, getTableData(horarios.sexta))
     appendHorariosDoDia(trManha, trTarde, getTableData(horarios.sabado))
     appendHorariosDoDia(trManha, trTarde, getTableData(horarios.domingoEFeriados))
+}
+
+/**
+ * @param {cardapio} cardapio 
+ */
+function setDataCardapio(cardapio) {
+    /**
+    * @param {Element} orderedList 
+    * @param {Array.<cardapioItem>} cardapioItem 
+    */
+    function setDataCardapioItem(orderedList, cardapioItem) {
+        for (let i = 0; i < cardapioItem.length; i++) {
+            const item = cardapioItem[i]
+            const li = document.createElement('li')
+            const nome = document.createElement('p')
+            const ingredientes = document.createElement('ul')
+
+            nome.innerHTML = item.nome
+            item.ingredientes.forEach((v) => {
+                const ingrediente = document.createElement('li')
+                ingrediente.innerHTML = v
+                ingredientes.appendChild(ingrediente)
+            })
+
+            li.appendChild(nome)
+            li.appendChild(ingredientes)
+            orderedList.appendChild(li)
+        }
+    }
+
+
+    const olBebidas = document.querySelector('[data-cardapio-category="bebidas"]')
+    const olSalgados = document.querySelector('[data-cardapio-category="salgados"]')
+    const olDoces = document.querySelector('[data-cardapio-category="doces"]')
+
+    if (olBebidas) {
+        olBebidas.innerHTML = ""
+        setDataCardapioItem(olBebidas, cardapio.bebidas)
+    }
+    if (olSalgados) {
+        olSalgados.innerHTML = ""
+        setDataCardapioItem(olSalgados, cardapio.salgados)
+    }
+    if (olDoces) {
+        olDoces.innerHTML = ""
+        setDataCardapioItem(olDoces, cardapio.doces)
+    }
 }
 
 fetchData()

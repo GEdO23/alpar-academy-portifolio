@@ -67,5 +67,138 @@
             },
             "isAberto": true
         }
+    },
+    "cardapio": {
+        "bebidas": [
+            {
+                "nome": "Cappuccino",
+                "ingredientes": [
+                    "Café especial (30ml)",
+                    "Leite"
+                ]
+            },
+            {
+                "nome": "Affogato",
+                "ingredientes": [
+                    "Café especial",
+                    "Sorvete de creme (180g)"
+                ]
+            },
+            {
+                "nome": "Cold Brew",
+                "ingredientes": [
+                    "Café especial (250g)",
+                    "Água (2,5l)",
+                    "Toddy"
+                ]
+            },
+            {
+                "nome": "Mocha",
+                "ingredientes": [
+                    "Café especial (20g)",
+                    "Água quente (100g)",
+                    "Leite (100ml)",
+                    "Doce de Leite (40g)"
+                ]
+            },
+            {
+                "nome": "Frapê de Café",
+                "ingredientes": [
+                    "Gelo (180g)",
+                    "Leite Condensado (120g)",
+                    "Chocolate Branco (100g)",
+                    "1 dose de café mais forte",
+                    "Calda de chocolate (café + cacau 70%)",
+                    "Chantilly"
+                ]
+            }
+        ],
+        "salgados": [
+            {
+                "nome": "Pão de queijo (5 porções)",
+                "ingredientes": [
+                    "4 copos (americanos) de polvilho doce (500 g)",
+                    "2 copos (americano) de leite (300 ml)",
+                    "2 ovos grandes",
+                    "1 colher (sopa) de sal a gosto",
+                    "1 copo (americano) de óleo (150 ml)",
+                    "4 copos (americano) de queijo meia cura ralado"
+                ]
+            },
+            {
+                "nome": "Coxinha de frango",
+                "ingredientes": [
+                    "Caldo de galinha",
+                    "Farinha de trigo peneirada (900g)",
+                    "1 colher (sobremesa) de margarina",
+                    "Leite a gosto para empanar",
+                    "Farinha de rosca a gosto para empanar"
+                ]
+            },
+            {
+                "nome": "Quibe",
+                "ingredientes": [
+                    "Carne moída (patinho ou coxão mole) (500g)",
+                    "Trigo para quibe (250g)",
+                    "Água fervente (350ml)",
+                    "1 cebola pequena picada",
+                    "2 dentes de alho picados",
+                    "3 colheres (sopa) de hortelã picada",
+                    "Sal e pimenta a gosto"
+                ]
+            },
+            {
+                "nome": "Esfiha",
+                "ingredientes": [
+                    "Farinha de trigo (1kg)",
+                    "2 colheres (sopa) de fermento para pão",
+                    "Carne moída (½kg)",
+                    "2 cebolas",
+                    "Caldo de limão"
+                ]
+            }
+        ],
+        "doces": [
+            {
+                "nome": "Bomba de chocolate",
+                "ingredientes": [
+                    "Farinha de trigo (150g)",
+                    "4 ovos inteiros",
+                    "Açúcar (15g)",
+                    "Sal (5g)",
+                    "Manteiga (100g)",
+                    "Água (250ml)",
+                    "2 xícaras (chá) de chocolate meio amargo picado",
+                    "2 xícaras (chá) de leite condensado",
+                    "2 xícaras (chá) de creme de leite",
+                    "3 gemas de ovo"
+                ]
+            },
+            {
+                "nome": "Donuts Americanos",
+                "ingredientes": [
+                    "2 ovos",
+                    "Leite (200ml)",
+                    "Fermento biológico seco (6g)",
+                    "Essência de baunilha (5ml)",
+                    "Doce de leite para rechear",
+                    "Chocolate meio amargo derretido para cobertura (180g)"
+                ]
+            },
+            {
+                "nome": "Cookies",
+                "ingredientes": [
+                    "300 g de chocolate meio amargo picado",
+                    "1/4 xícara de chocolate em pó",
+                    "3/4 xícara de açúcar",
+                    "1/2 xícara de açúcar mascavo",
+                    "1 colher (chá) de essência de baunilha",
+                    "1 colher (chá) de fermento em pó",
+                    "1 e 3/4 de xícara de farinha de trigo",
+                    "Manteiga sem sal (125g)",
+                    "1 ovo"
+                ]
+            }
+        ]
     }
 }
