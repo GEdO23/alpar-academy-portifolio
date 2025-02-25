@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/imgs/Logo.png" type="image/x-icon" />
+    <title>CrossTech</title>
+</head>
+
+<style>
+    :root {
+        --color-surface: #FFFFFF;
+        --color-on-surface: #000826;
+        --color-on-surface-variant: #474E66;
+        --color-surface-inverse: #000826;
+        --color-on-surface-inverse: #FFFFFF;
+        --font-primary-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--font-primary-family);
+    }
+
+    video {
+        width: 1376px;
+        border-radius: 16px;
+    }
+
+    .cabecalho,
+    .rodape {
+        padding: 16px 32px;
+        background-color: var(--color-surface-inverse);
+        color: var(--color-on-surface-inverse);
+    }
+
+    #podcast-episode-page {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        gap: 32px;
+        padding: 32px;
+        background-color: var(--color-surface);
+    }
+
+    .podcast-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .podcast-title {
+        font-weight: 400;
+        font-size: 36px;
+        color: var(--color-on-surface);
+        line-height: 54px;
+    }
+
+    .podcast-description {
+        font-weight: 400;
+        font-size: 20px;
+        color: var(--color-on-surface-variant);
+        line-height: 30px;
+    }
+
+    .logo-crosstech {
+        width: 64px;
+        aspect-ratio: 1;
+    }
+</style>
+
+<body>
+
+    <header class="cabecalho">
+        <img class="logo-crosstech" src="./assets/imgs/Logo.png" alt="Logo da CrossTech">
+    </header>
+
+    <main>
+        <div id="podcast-episode-page">
+            <video controls>
+                <source src="./assets/videos/podcast.mp4" type="video/mp4">
+            </video>
+            <div class="podcast-summary">
+                <h3 class="podcast-title">Vale a pena se especializar em Front-end?</h3>
+                <p class="podcast-description">
+                    No episódio de hoje, vamos discutir um tema muito relevante para quem
+                    trabalha com desenvolvimento: vale a
+                    pena se especializar em Front-end?
+                </p>
+            </div>
+            <audio controls>
+                <source src="./assets/audios/ep1-audio1.MP3" type="audio/mp3">
+            </audio>
+        </div>
+    </main>
+
+</body>
+
+</html>
