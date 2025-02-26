@@ -1,0 +1,51 @@
+@import url('./post.css');
+@import url('./footer.css');
+
+:root {
+    --color-primary: #E59321;
+    --color-on-primary: ##FFF;
+    --color-surface: #FFF;
+    --color-on-surface: #000826;
+    --color-on-surface-variant: #474E66;
+    --color-surface-inverse: #000826;
+    --color-on-surface-inverse: #FFF;
+
+    --font-primary-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary-family);
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+.page-header {
+    display: flex;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 16px;
+    background: var(--color-surface-inverse, #030818);
+}
+
+.page-content {
+    padding: 32px;
+    background: var(--color-surface, #FFF);
+    padding-bottom: 273px;
+}
+
+@media only screen and (max-width: 712px) {
+    .page-header {
+        display: flex;
+        padding: 8px 16px;
+    }
+
+    .page-content {
+        padding: 16px;
+    }
+}

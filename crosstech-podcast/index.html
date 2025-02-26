@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/imgs/Logo32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>CrossTech</title>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <img srcset="
+            ./assets/imgs/Logo32x32.png 32w,
+            ./assets/imgs/Logo64x64.png 64w
+        " sizes="
+            (max-width: 440px) 32px, 
+            64px
+        " src="./assets/imgs/Logo64x64.png" alt="Logo da CrossTech">
+    </header>
+
+    <main class="page-content">
+        <article class="post">
+            <header>
+                <h2 class="post__title">Vale a pena se especializar em Front-end?</h2>
+            </header>
+            <section class="post__content">
+                <video controls>
+                    <source src="./assets/videos/podcast.mp4" type="video/mp4">
+                </video>
+                <div class="post__summary">
+                    <p class="post__description">
+                        No episódio de hoje, vamos discutir um tema muito relevante para quem
+                        trabalha com desenvolvimento: vale a
+                        pena se especializar em Front-end?
+                    </p>
+                </div>
+                <ul class="post__audio-list">
+                    <li>
+                        <audio controls>
+                            <source src="./assets/audios/ep1-audio1.MP3" type="audio/mp3">
+                        </audio>
+                    </li>
+                    <li>
+                        <audio controls>
+                            <source src="./assets/audios/ep1-audio2.MP3" type="audio/mp3">
+                        </audio>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <article class="post">
+            <header>
+                <h2 class="post__title">Outro Título do Post</h2>
+            </header>
+            <section class="post__content">
+                <div class="post__summary">
+                    <p class="post__description">
+                        No episódio de hoje, vamos discutir um tema muito relevante para quem
+                        trabalha com desenvolvimento: vale a
+                        pena se especializar em Front-end?
+                    </p>
+                </div>
+                <figure>
+                    <img src="../assets/images/gatinho.jpeg" alt="gatinho">
+                    <figcaption>gato</figcaption>
+                </figure>
+            </section>
+        </article>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer__website-details">
+            <div class="footer__company">
+                <img src="./assets/imgs/Full_Logo-White.png" alt="CrossTech">
+                <p>
+                    O podcast que conecta conhecimento, inovação e mercado de tecnologia! Aqui, a gente fala sobre tudo:
+                    desde as tendências mais recentes até as tecnologias que moldaram o setor.
+                </p>
+            </div>
+            <ul class="footer__links-list">
+                <li>
+                    <a href="#">Anuncie</a>
+                </li>
+                <li>
+                    <a href="#">Notícias</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+            </ul>
+            <form class="footer__form">
+                <h3 class="footer__form__title">Newsletter</h3>
+                <p>Assine noss anewsletter, e receba todas as novidades</p>
+                <input type="email" placeholder="Digite seu e-mail">
+                <button type="button">Cadastrar e-mail</button>
+            </form>
+        </div>
+        <div class="footer__team">
+            <p>João Victor Ferreira Faustino Fortes</p>
+            <p>Gabriel Eringer de Oliveira</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

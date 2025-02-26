@@ -1,0 +1,75 @@
+.post {
+    margin-bottom: 32px;
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--color-surface, #FFF);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+    justify-self: center;
+}
+
+.post>header {
+    margin-bottom: 32px;
+}
+
+.post .post__title {
+    color: var(--color-on-surface, #030818);
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.post .post__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.post video {
+    width: 100%;
+    max-width: 1376px;
+    height: auto;
+    border-radius: 16px;
+}
+
+.post .post__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post .post__description {
+    color: var(--color-on-surface-variant, #474E66);
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.post .post__audio-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.post .post__content figure {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.post .post__content figure img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.post .post__content figure figcaption {
+    margin-top: 8px;
+    font-size: 16px;
+    color: var(--color-on-surface-variant, "#474E66");
+}
+
+
+@media only screen and (max-width: 712px) {
+
+    .post .post__audio-list li,
+    .post .post__audio-list li audio {
+        width: 100%;
+    }
+}

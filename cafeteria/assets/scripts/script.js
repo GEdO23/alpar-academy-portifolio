@@ -24,7 +24,7 @@
  */
 
 async function fetchData() {
-    const url = "http://127.0.0.1:5500/dia-02/db.json"
+    const url = "http://127.0.0.1:5500/cafeteria/assets/database/db.json"
     await fetch(url)
         .then((resp) => resp.json())
         .then(
