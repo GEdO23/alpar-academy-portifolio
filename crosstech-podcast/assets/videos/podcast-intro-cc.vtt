@@ -1,8 +1,17 @@
 WEBVTT
 
+STYLE
+::cue(.txt-brand-gradient) {
+    font-weight: 900;
+    background-image: linear-gradient(to right, #EF5A5A, #EF785A, #E59321, #1CAEE4, #1C3DE4);
+    color: transparent;
+    background-clip: text;
+    text-decoration:underline;
+}
+
 1
 00:00:00.000 --> 00:00:02.000
-<b>João:</b> Fala pessoal! Sejam bem vindos ao <b>CrossTech</b>,
+<b>João:</b> Fala pessoal! Sejam bem vindos ao <c.txt-brand-gradient>CrossTech</c>,
 
 2
 00:00:02.000 --> 00:00:04.500
@@ -58,4 +67,4 @@ Quem já tá no mercado também precisa continuar estudando, porque tecnologia m
 
 15
 00:01:08.000 --> 00:01:11.000
-<b>Seja bem-vindo ao Cross Tech! 🚀</b>
+<b>Seja bem-vindo ao <c.txt-brand-gradient>CrossTech</c>! 🚀</b>
