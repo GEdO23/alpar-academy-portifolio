@@ -1,4 +1,4 @@
-<img src="./assets/imgs/Logo.png" alt="Logo da CrossTech" align="right">
+<img src="./assets/imgs/Logo64x64.png" alt="Logo da CrossTech" align="right">
 
 # CrossTech
 
@@ -20,3 +20,6 @@ Depois de criar a página, conecte-a com o seu portfólio e suba para o GitHub.
 ## Equipe de desenvolvimento
 - João Victor Ferreira Faustino Fortes
 - Gabriel Eringer de Oliveira
+
+## Design 
+[Figma File](https://www.figma.com/design/fmguGJ8bYlxcGgjvyymj7H/Rocket.Podcast?node-id=27-223&t=32fbBbiTCzErsKhQ-1)
