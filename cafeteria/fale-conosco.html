@@ -9,62 +9,68 @@
 </head>
 
 <body>
+    <header>
+        <img src="./assets/imgs/logo/EringerKaffee-Logo-VariantPrimary.png" alt="Eringer Kaffe Logo">
+        <nav>
+            <ul>
+                <li><a href="./" aria-label="Ir para página principal">Página principal</a></li>
+                <li><a href="./fale-conosco.html" aria-label="Ir para página de contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <img src="./assets/imgs/logo/EringerKaffee-Logo-VariantPrimary.png" alt="Eringer Kaffe Logo">
+    <main>
+        <article>
+            <h2>Envie-nos uma mensagem</h2>
 
-    <h1>Fale Conosco</h1>
+            <form>
+                <fieldset>
+                    <legend>Formulário de Contato</legend>
+                    <label for="in-full-name">
+                        Nome Completo:
+                        <br>
+                        <input type="text" id="in-full-name" required>
+                    </label>
 
-    <form>
-        <fieldset>
-            <legend>
-                <h2>Envie-nos uma mensagem</h2>
-            </legend>
-            <label for="in-full-name">
-                Nome Completo:
-                <br>
-                <input type="text" id="in-full-name" required>
-            </label>
+                    <br>
 
-            <br>
+                    <label for="in-email">
+                        Email:
+                        <br>
+                        <input type="email" id="in-email" required>
+                    </label>
 
-            <label for="in-email">
-                Email:
-                <br>
-                <input type="email" id="in-email" required>
-            </label>
+                    <br>
 
-            <br>
+                    <label for="in-tel">
+                        Telefone (opcional):
+                        <br>
+                        <input type="tel" id="in-tel">
+                    </label>
 
-            <label for="in-tel">
-                Telefone (opcional):
-                <br>
-                <input type="tel" id="in-tel">
-            </label>
+                    <br>
 
-            <br>
+                    <label for="in-subject">
+                        Assunto:
+                        <br>
+                        <input type="text" id="in-subject" required>
+                    </label>
 
-            <label for="in-subject">
-                Assunto:
-                <br>
-                <input type="text" id="in-subject" required>
-            </label>
+                    <br>
 
-            <br>
+                    <label for="in-message">
+                        Mensagem:
+                        <br>
+                        <textarea id="in-message" required></textarea>
+                    </label>
 
-            <label for="in-message">
-                Mensagem:
-                <br>
-                <textarea id="in-message" required></textarea>
-            </label>
+                    <br>
 
-            <br>
-
-            <button type="submit">Enviar</button>
-        </fieldset>
-    </form>
-
-    <a href="./">Voltar para página principal</a>
-
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </article>
+    </main>
 </body>
 
 </html>
