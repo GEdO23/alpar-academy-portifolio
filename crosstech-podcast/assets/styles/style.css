@@ -25,7 +25,7 @@ body {
     min-height: 100vh;
 }
 
-.page-header {
+header.page-header {
     display: flex;
     padding: 16px 32px;
     align-items: center;
@@ -33,19 +33,19 @@ body {
     background: var(--color-surface-inverse, #030818);
 }
 
-.page-content {
+main.page-content {
     padding: 32px;
     background: var(--color-surface, #FFF);
     padding-bottom: 273px;
 }
 
 @media only screen and (max-width: 712px) {
-    .page-header {
+    header.page-header {
         display: flex;
         padding: 8px 16px;
     }
 
-    .page-content {
+    main.page-content {
         padding: 16px;
     }
 }
