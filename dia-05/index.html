@@ -29,9 +29,9 @@
         font-family: var(--font-primary-family);
     }
 
-    ul,
-    ol {
-        list-style-type: none;
+    body {
+        position: relative;
+        min-height: 100vh;
     }
 
     .page-header {
@@ -45,6 +45,7 @@
     .page-content {
         padding: 32px;
         background: var(--color-surface, #FFF);
+        padding-bottom: 273px;
     }
 
     .post {
@@ -75,7 +76,7 @@
     .post video {
         width: 100%;
         max-width: 1376px;
-        height: 600px;
+        height: auto;
         border-radius: 16px;
     }
 
@@ -93,8 +94,9 @@
 
     .post .post__audio-list {
         display: flex;
-        gap: 32px 16px;
+        gap: 16px;
         flex-wrap: wrap;
+        list-style-type: none;
     }
 
     .post .post__content figure {
@@ -113,6 +115,12 @@
         color: var(--color-on-surface-variant, "#474E66");
     }
 
+    .page-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
     .footer__website-details {
         display: flex;
         padding: 32px;
@@ -123,7 +131,8 @@
     }
 
     .footer__website-details .footer__company {
-        width: 492px;
+        width: 100%;
+        max-width: 492px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -137,6 +146,7 @@
         justify-content: center;
         align-items: center;
         gap: 16px;
+        list-style-type: none;
     }
 
     .footer__website-details .footer__links-list a {
@@ -183,13 +193,67 @@
         display: flex;
         justify-content: center;
         gap: 16px;
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width: 712px) {
+        .page-header {
+            display: flex;
+            padding: 8px 16px;
+        }
+
+        .page-content {
+            padding: 16px;
+        }
+
+        .page-footer {
+            position: relative;
+        }
+
+        .post .post__audio-list li,
+        .post .post__audio-list li audio {
+            width: 100%;
+        }
+
+        .footer__website-details {
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .footer__website-details .footer__links-list {
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .footer__website-details .footer__form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer__team {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 12px;
+            gap: 8px;
+        }
     }
 </style>
 
 <body>
 
     <header class="page-header">
-        <img src="./assets/imgs/Logo.png" alt="Logo da CrossTech">
+        <img srcset="
+            ./assets/imgs/Logo32x32.png 32w,
+            ./assets/imgs/Logo64x64.png 64w
+        " sizes="
+            (max-width: 440px) 32px, 
+            64px
+        " src="./assets/imgs/Logo64x64.png" alt="Logo da CrossTech">
     </header>
 
     <main class="page-content">
@@ -242,7 +306,7 @@
         </article>
     </main>
 
-    <footer>
+    <footer class="page-footer">
         <div class="footer__website-details">
             <div class="footer__company">
                 <img src="./assets/imgs/Full_Logo-White.png" alt="CrossTech">
@@ -265,13 +329,12 @@
             <form class="footer__form">
                 <h3 class="footer__form__title">Newsletter</h3>
                 <p>Assine noss anewsletter, e receba todas as novidades</p>
-                <input type="text" placeholder="Digite seu e-mail">
+                <input type="email" placeholder="Digite seu e-mail">
                 <button type="button">Cadastrar e-mail</button>
             </form>
         </div>
         <div class="footer__team">
             <p>João Victor Ferreira Faustino Fortes</p>
-            <p>|</p>
             <p>Gabriel Eringer de Oliveira</p>
         </div>
     </footer>
