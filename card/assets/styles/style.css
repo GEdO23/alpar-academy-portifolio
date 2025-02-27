@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100dvh;
+}
+
+aside.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 16px;
+}
+
+aside.menu a.goback-link {
+    height: 2.5rem;
+}
+
+aside.menu a.goback-link img {
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.bg-video-overlay {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-card {
+    max-width: 100%;
+    padding: 2rem 1rem;
+    background-color: #FFF;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.profile-card header.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20rem;
+    margin-bottom: 2rem;
+}
+
+img.profile-picture {
+    width: 8rem;
+    aspect-ratio: 1/1;
+    margin-bottom: 1rem;
+    border-radius: 100%;
+}
+
+.profile-card .profile-details>.profile-name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.profile-card .profile-details>.profile-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7D7D7D;
+    text-align: center;
+}
+
+.profile-card nav.profile-socialmedia-nav>ul {
+    max-width: 20rem;
+}
+
+.profile-card nav.profile-socialmedia-nav>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-card nav.profile-socialmedia-nav>ul>li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link>img {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+}
+
+.bg-github {
+    background-color: #24292F;
+    color: #FFF;
+    transition: background-color 1s;
+}
+
+.bg-github:hover {
+    background-color: #12151a;
+}
+
+.bg-linkedin {
+    background-color: #0A66C2;
+    color: #FFF;
+    transition: background-color 1s;
+}
+
+.bg-linkedin:hover {
+    background-color: #044381;
+}
