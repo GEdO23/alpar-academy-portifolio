@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     height: 100dvh;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -19,7 +22,7 @@ main {
 
 .profile-card {
     max-width: 100%;
-    padding: 32px 16px;
+    padding: 2rem 1rem;
     background-color: #FFF;
     border-radius: 16px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -29,40 +32,40 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 320px;
-    margin-bottom: 32px;
+    max-width: 20rem;
+    margin-bottom: 2rem;
 }
 
 img.profile-picture {
-    width: 128px;
+    width: 8rem;
     aspect-ratio: 1/1;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     border-radius: 100%;
 }
 
 .profile-card .profile-details>.profile-name {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #000;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .profile-card .profile-details>.profile-description {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: #7D7D7D;
     text-align: center;
 }
 
 .profile-card nav.profile-socialmedia-nav>ul {
-    max-width: 320px;
+    max-width: 20rem;
 }
 
 .profile-card nav.profile-socialmedia-nav>ul {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .profile-card nav.profile-socialmedia-nav>ul>li {
@@ -73,18 +76,21 @@ img.profile-picture {
 
 .profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link {
     display: block;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     text-align: center;
-    padding: 16px;
+    padding: 1rem;
     border-radius: 8px;
 }
 
 .profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link>img {
     position: absolute;
-    left: 16px;
-    top: 13.5px;
-    bottom: 13.5px;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    aspect-ratio: 1/1;
 }
 
 .bg-github {
