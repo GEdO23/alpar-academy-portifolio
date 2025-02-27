@@ -5,29 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartão de Perfil - GEdO</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
 <body>
 
     <main>
-        <div>
-            <header>
-                <img src="../assets/imgs/foto.jpg" alt="Foto de Perfil" style="display: none;">
-                <div>
-                    <h1>Gabriel Eringer de Oliveira</h1>
-                    <p>🚀 Desenvolvedor Full Stack<br>UX/UI Designer</p>
+        <div class="profile-card">
+            <header class="profile-header">
+                <img class="profile-picture" src="../assets/imgs/foto.jpg" alt="Foto de Perfil">
+                <div class="profile-details">
+                    <h1 class="profile-name">Gabriel Eringer de Oliveira</h1>
+                    <p class="profile-description">🚀 Desenvolvedor Full Stack<br>UX/UI Designer</p>
                 </div>
             </header>
-            <nav>
+            <nav class="profile-socialmedia-nav">
                 <ul>
                     <li>
-                        <a href="https://github.com/GEdO23" aria-label="Link para GitHub de Gabriel">
+                        <a class="profile-socialmedia-link bg-github" href="https://github.com/GEdO23"
+                            aria-label="Link para GitHub de Gabriel">
                             <img src="./assets/icons/icon-github.svg" alt="Logo do GitHub">
                             GitHub
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/gabriel-eringer-de-oliveira/"
+                        <a class="profile-socialmedia-link bg-linkedin"
+                            href="https://www.linkedin.com/in/gabriel-eringer-de-oliveira/"
                             aria-label="Link para LinkedIn de Gabriel">
                             <img src="./assets/icons/icon-linkedin.svg" alt="Logo do LinkedIn">
                             LinkedIn

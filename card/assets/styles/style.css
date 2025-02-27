@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile-card {
+    max-width: 100%;
+    padding: 32px 16px;
+    background-color: #FFF;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.profile-card header.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin-bottom: 32px;
+}
+
+img.profile-picture {
+    width: 128px;
+    aspect-ratio: 1/1;
+    margin-bottom: 16px;
+    border-radius: 100%;
+}
+
+.profile-card .profile-details>.profile-name {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.profile-card .profile-details>.profile-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #7D7D7D;
+    text-align: center;
+}
+
+.profile-card nav.profile-socialmedia-nav>ul {
+    max-width: 320px;
+}
+
+.profile-card nav.profile-socialmedia-nav>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-card nav.profile-socialmedia-nav>ul>li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link>img {
+    position: absolute;
+    left: 16px;
+    top: 13.5px;
+    bottom: 13.5px;
+}
+
+.bg-github {
+    background-color: #24292F;
+    color: #FFF;
+}
+
+.bg-linkedin {
+    background-color: #0A66C2;
+    color: #FFF;
+}
