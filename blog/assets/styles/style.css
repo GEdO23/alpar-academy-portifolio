@@ -1,0 +1,103 @@
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/Inter/Inter.ttf');
+}
+
+/* RESET DO CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+ol,
+ul {
+    padding-left: 30px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+    margin-block: 16px;
+}
+
+li {
+    padding-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #bbb;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+pre {
+    display: block;
+    background-color: #bbb;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 8px;
+    margin: 0 16px 8px;
+}
+
+.post {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ddd;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+header#header {
+    background-color: #1865ff;
+    color: #fff;
+    padding: 16px 32px;
+}
+
+header p {
+    text-indent: 0;
+    margin: 0;
+}
+
+aside {
+    background-color: #4684ff;
+    color: #fff;
+    padding: 16px 16px 8px;
+    margin: 0 0 16px;
+}
+
+aside a {
+    color: #fff;
+}

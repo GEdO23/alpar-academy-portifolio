@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpar Rocket Blog</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <h1>Alpar Rocket Blog</h1>
         <p>Seu blog de notícias e conhecimento sobre tecnologia.</p>
     </header>
@@ -28,7 +29,7 @@
         </nav>
     </aside>
     <main>
-        <article>
+        <article class="post">
             <header>
                 <h2>IA: O quê é?</h2>
             </header>
@@ -142,13 +143,13 @@
                 </p>
             </section>
         </article>
-        <article>
+        <article class="post">
             <header>
                 <h2>Rede de computadores</h2>
             </header>
             <section>
                 <figure>
-                    <img src="./rede.webp"
+                    <img src="./assets/imgs/rede.webp"
                         alt="Imagem que representa uma rede de computadores, com um globo em azul ligado por cabos em vários laptops, em aluzão a conexão global da internet." />
                     <figcaption>
                         Rede de Computadores interligadas mundialmente
@@ -233,7 +234,7 @@
                 </p>
             </section>
         </article>
-        <article>
+        <article class="post">
             <header>
                 <h2>O que é o HTML?</h2>
             </header>
@@ -254,8 +255,8 @@
                 <p>Por exemplo:</p>
                 <pre>&lt;p&gt;Este é um parágrafo.&lt;/p&gt;</pre>
                 <ul>
-                    <li><span>&lt;p&gt;</span>: Tag de abertura</li>
-                    <li><span>&lt;/p&gt;</span>: Tag de fechamento</li>
+                    <li><span class="badge">&lt;p&gt;</span>: Tag de abertura</li>
+                    <li><span class="badge">&lt;/p&gt;</span>: Tag de fechamento</li>
                     <li>O texto entre as tags é o conteúdo do parágrafo.</li>
                 </ul>
                 <h3>Estrutura básica de um documento HTML</h3>
@@ -277,25 +278,25 @@
                 <h3>Componentes dessa estrutura:</h3>
                 <ol>
                     <li>
-                        <span>&lt;!DOCTYPE html&gt;</span>: Informa ao
+                        <span class="badge">&lt;!DOCTYPE html&gt;</span>: Informa ao
                         navegador que o documento está usando a versão mais recente do
                         HTML (HTML5).
                     </li>
                     <li>
-                        <span>&lt;html&gt;</span>: A tag raiz que contém
+                        <span class="badge">&lt;html&gt;</span>: A tag raiz que contém
                         todo o conteúdo da página.
                     </li>
                     <li>
-                        <span>&lt;head&gt;</span>: Contém informações sobre
+                        <span class="badge">&lt;head&gt;</span>: Contém informações sobre
                         o documento, como título, meta informações e links para estilos ou
                         scripts.
                     </li>
                     <li>
-                        <span>&lt;title&gt;</span>: Define o título da
+                        <span class="badge">&lt;title&gt;</span>: Define o título da
                         página exibido na aba do navegador.
                     </li>
                     <li>
-                        <span>&lt;body&gt;</span>: Contém o conteúdo visível
+                        <span class="badge">&lt;body&gt;</span>: Contém o conteúdo visível
                         da página, como textos, imagens e links.
                     </li>
                 </ol>
@@ -321,7 +322,7 @@
                 </p>
             </section>
         </article>
-        <article>
+        <article class="post">
             <header>
                 <h2>CSS na Prática</h2>
             </header>
@@ -349,36 +350,36 @@
                 <ul>
                     <li>Cores e fontes:</li>
                     <ul>
-                        <li><span>color</span>: Cor do texto.</li>
+                        <li><span class="badge">color</span>: Cor do texto.</li>
                         <li>
-                            <span>background-color</span>: Cor de fundo.
+                            <span class="badge">background-color</span>: Cor de fundo.
                         </li>
-                        <li><span>font-size</span>: Tamanho da fonte.</li>
-                        <li><span>font-family</span>: Tipo da fonte.</li>
+                        <li><span class="badge">font-size</span>: Tamanho da fonte.</li>
+                        <li><span class="badge">font-family</span>: Tipo da fonte.</li>
                     </ul>
                     <li>Espaçamento:</li>
                     <ul>
                         <li>
-                            <span>margin</span>: Espaço externo (fora do
+                            <span class="badge">margin</span>: Espaço externo (fora do
                             elemento).
                         </li>
                         <li>
-                            <span>padding</span>: Espaço interno (dentro do
+                            <span class="badge">padding</span>: Espaço interno (dentro do
                             elemento).
                         </li>
                     </ul>
                     <li>Posicionamento e layout:</li>
                     <ul>
                         <li>
-                            <span>display</span>: Define como o elemento é
+                            <span class="badge">display</span>: Define como o elemento é
                             exibido (ex.: block, inline, flex).
                         </li>
                         <li>
-                            <span>position</span>: Define a posição (ex.:
+                            <span class="badge">position</span>: Define a posição (ex.:
                             relative, absolute).
                         </li>
                         <li>
-                            <span>width e height</span>: Largura e altura.
+                            <span class="badge">width e height</span>: Largura e altura.
                         </li>
                     </ul>
                 </ul>
