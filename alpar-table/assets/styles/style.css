@@ -1,3 +1,5 @@
+@import url('./header.css');
+
 @font-face {
     font-family: 'Sofia Pro';
     font-weight: 400;
@@ -63,4 +65,14 @@ h2 {
 a {
     color: #000;
     text-decoration: none;
+}
+
+a.link-btn {
+    color: #0F4E7D;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    font-weight: 300;
+    border: 1px #0F4E7D solid;
+    border-radius: 100px;
 }
