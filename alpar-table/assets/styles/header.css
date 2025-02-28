@@ -41,5 +41,17 @@ header#header ul>li {
 header#header a {
     font-size: 18px;
     font-weight: 300;
-    color: #0F4E7D;
+    color: var(--color-primary, #000);
+    font-family: var(--font-primary, var(--font-secondary, sans-serif));
+}
+
+a.contact-link-btn {
+    color: var(--color-primary, #000);
+    background-color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    font-weight: 300;
+    border: 1px var(--color-primary, #000) solid;
+    border-radius: 100px;
+    font-family: var(--font-secondary, sans-serif);
 }
