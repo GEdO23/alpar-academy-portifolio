@@ -1,0 +1,16 @@
+main .hero-banner {
+    width: 100%;
+    padding: 100px 0 60px;
+    background-color: var(--color-primary, #000);
+    text-align: center;
+}
+
+main .hero-banner h1 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+main .hero-banner h2 {
+    font-size: 18px;
+    color: #fff;
+}

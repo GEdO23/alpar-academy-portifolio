@@ -1,0 +1,132 @@
+@import url('./header.css');
+@import url('./banner.css');
+@import url('./sections.css');
+@import url('./footer.css');
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    src: url('../fonts/sofia-pro/sofia-pro-regular.otf');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    src: url('../fonts/sofia-pro/sofia-pro-light.otf');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 200;
+    src: url('../fonts/sofia-pro/sofia-pro-ultralight.otf');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 500;
+    src: url('../fonts/sofia-pro/sofia-pro-medium.otf');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 600;
+    src: url('../fonts/sofia-pro/sofia-pro-semibold.otf');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 700;
+    src: url('../fonts/sofia-pro/sofia-pro-bold.otf');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 900;
+    src: url('../fonts/sofia-pro/sofia-pro-black.otf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url('../fonts/poppins/poppins-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 300;
+    src: url('../fonts/poppins/poppins-light.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 200;
+    src: url('../fonts/poppins/poppins-extralight.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    src: url('../fonts/poppins/poppins-medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 600;
+    src: url('../fonts/poppins/poppins-semibold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    src: url('../fonts/poppins/poppins-bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 900;
+    src: url('../fonts/poppins/poppins-black.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/montserrat.ttf');
+}
+
+:root {
+    --font-primary: 'Sofia Pro';
+    --font-secondary: 'Poppins';
+    --font-tertiary: 'Montserrat';
+
+    --color-primary: #0F4E7D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: var(--font-primary, var(--font-secondary, sans-serif));
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: var(--font-primary, var(--font-secondary, sans-serif));
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.body-text {
+    font-weight: 200;
+    font-size: 18px;
+    color: #969ba1;
+    line-height: 28.8px;
+    font-family: var(--font-primary, var(--font-secondary, sans-serif));
+}
