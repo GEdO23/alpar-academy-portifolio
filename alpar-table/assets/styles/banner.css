@@ -1,0 +1,16 @@
+main article.banner {
+    width: 100%;
+    padding: 100px 0 60px;
+    background-color: #0F4E7D;
+    text-align: center;
+}
+
+main article.banner h1 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+main article.banner h2 {
+    font-size: 18px;
+    color: #fff;
+}
