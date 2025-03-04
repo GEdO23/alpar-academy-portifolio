@@ -9,22 +9,24 @@
     <meta name="keywords" content="portifolio, gedo, full-stack, android, developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
 <body>
+    <div class="page-bg"></div>
 
     <main>
-        <article>
-            <header>
+        <header>
+            <div>
                 <h1>Gabriel Eringer de Oliveira (GEdO)</h1>
-                <p>🚀 Desenvolvedor Full Stack | UX/UI Designer | Apaixonado por Tecnologia</p>
-                <img src="./assets/imgs/foto.jpg" alt="Foto de Gabriel Eringer">
-            </header>
-        </article>
+                <h2>Desenvolvedor Full Stack | UX/UI Designer | Apaixonado por Tecnologia</h2>
+            </div>
+            <img src="./assets/imgs/foto.jpg" alt="Foto de Gabriel Eringer">
+        </header>
 
-        <article>
+        <section class="about-me">
             <h2>Sobre mim</h2>
-            <section>
+            <div>
                 <p>Olá! 👋 Sou Gabriel Eringer, formado em Análise e Desenvolvimento de Sistemas pela FIAP, e tenho uma
                     verdadeira paixão por tecnologia.</p>
                 <p>
@@ -38,21 +40,34 @@
                     Acredito que a combinação de um design centrado no usuário com um backend sólido é a chave para
                     entregar soluções de sucesso.
                 </p>
-            </section>
-        </article>
+            </div>
+        </section>
 
-        <article>
+        <section class="projects">
             <h2>Projetos</h2>
-            <section>
+            <nav>
                 <ul>
-                    <li><a href="./cafeteria/">Cafeteria Eringer Kaffee</a></li>
-                    <li><a href="./alpar-table/">Site de uma empresa com layout de tabela</a></li>
-                    <li><a href="./crosstech-podcast/">CrossTech Podcast</a></li>
-                    <li><a href="./blog/">Alpar Rocket Blog</a></li>
-                    <li><a href="./card/">Cartão de Perfil</a></li>
+                    <li><a href="./cafeteria/" title="Visitar site do projeto Eringer Kaffee">
+                            <img src="./assets/imgs/project-covers/project_cover-eringer_kaffee.png"
+                                alt="Eringer Kaffee">
+                        </a></li>
+                    <li><a href="./alpar-table/" title="Visitar site do projeto Alpar Table">
+                            <img src="./assets/imgs/project-covers/project_cover-alpar_table.png" alt="Alpar Table">
+                        </a></li>
+                    <li><a href="./crosstech-podcast/" title="Visitar site do projeto CrossTech">
+                            <img src="./assets/imgs/project-covers/project_cover-crosstech.png" alt="CrossTech">
+                        </a></li>
+                    <li><a href="./blog/" title="Visitar site do projeto Alpar Rocket Blog">
+                            <img src="./assets/imgs/project-covers/project_cover-alpar_rocket_blog.png"
+                                alt="Alpar Rocket Blog">
+                        </a></li>
+                    <li><a href="./card/" title="Visitar site do projeto Cartão de Perfil">
+                            <img src="./assets/imgs/project-covers/project_cover-cartao_de_perfil.png"
+                                alt="Cartão de Perfil">
+                        </a></li>
                 </ul>
-            </section>
-        </article>
+            </nav>
+        </section>
     </main>
 
     <footer>
