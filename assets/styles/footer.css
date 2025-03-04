@@ -1,0 +1,30 @@
+footer#footer {
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0px -8px 8px 0px rgba(0, 0, 0, 0.10);
+}
+
+footer#footer>.title {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+footer#footer>nav>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+}
+
+footer#footer a {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: #0086B4;
+    font-family: 'Source Serif', 'Times New Roman', Times, serif;
+}
