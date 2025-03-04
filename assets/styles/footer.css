@@ -3,19 +3,20 @@ footer#footer {
     padding: 1rem;
     position: absolute;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.20);
+    background: var(--c-bg-o20, rgba(255, 255, 255, 0.2));
     box-shadow: 0px -8px 8px 0px rgba(0, 0, 0, 0.10);
 }
 
-footer#footer>.title {
+footer#footer .title {
     margin-bottom: 0.5rem;
     font-size: 1rem;
     font-weight: 400;
-    color: #000;
-    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: var(--c-primary, #000);
+    font-family: var(--ff-secondary, sans-serif);
 }
 
-footer#footer>nav>ul {
+footer#footer ul {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -25,6 +26,7 @@ footer#footer>nav>ul {
 footer#footer a {
     font-size: 0.625rem;
     font-weight: 600;
-    color: #0086B4;
-    font-family: 'Source Serif', 'Times New Roman', Times, serif;
+    line-height: 150%;
+    color: var(--c-brand, #000);
+    font-family: var(--ff-primary, serif);
 }

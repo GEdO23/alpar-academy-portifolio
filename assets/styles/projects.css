@@ -5,14 +5,6 @@ section.section-projects {
     gap: 1rem;
 }
 
-section.section-projects>.title {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 150%;
-    color: #000;
-    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-}
-
 section.section-projects nav>ul {
     display: flex;
     gap: 1rem 0.5rem;

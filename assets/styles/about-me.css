@@ -5,25 +5,17 @@ section.section-about-me {
     gap: 1rem;
 }
 
-section.section-about-me>.title {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 150%;
-    color: #000;
-    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-}
-
 section.section-about-me>.text-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-section.section-about-me>.text-container>p {
+section.section-about-me p {
     text-align: justify;
     font-size: 0.625rem;
     font-weight: 400;
     line-height: 150%;
-    color: #000;
-    font-family: 'Source Serif', 'Times New Roman', Times, serif;
+    color: var(--c-primary, #000);
+    font-family: var(--ff-primary, serif);
 }
