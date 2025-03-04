@@ -16,5 +16,23 @@ section.section-projects nav>ul {
     width: 7.5rem;
     height: 3.75rem;
     aspect-ratio: 2/1;
-    border-radius: 0.25rem;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 1200px) {
+    section.section-projects {
+        padding: 4rem 10rem;
+        gap: 2rem;
+    }
+
+    section.section-projects nav>ul {
+        gap: 1rem 2rem;
+    }
+
+    .project {
+        width: 20rem;
+        height: 10rem;
+        aspect-ratio: 2/1;
+        border-radius: 16px;
+    }
 }

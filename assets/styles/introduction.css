@@ -35,3 +35,29 @@ main>header.introduction img.photo {
     aspect-ratio: 1/1;
     border-radius: 100%;
 }
+
+@media only screen and (min-width: 1200px) {
+    main>header.introduction {
+        padding: 4rem 10rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    main>header.introduction>.text-container {
+        gap: 1rem;
+    }
+
+    main>header.introduction .title {
+        font-size: 3rem;
+    }
+
+    main>header.introduction .subtitle {
+        font-size: 1.5rem;
+    }
+
+    main>header.introduction img.photo {
+        width: 15rem;
+        height: 15rem;
+        aspect-ratio: 1/1;
+    }
+}
