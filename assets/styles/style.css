@@ -1,0 +1,81 @@
+@import url('./footer.css');
+@import url('./introduction.css');
+@import url('./about-me.css');
+@import url('./projects.css');
+
+@font-face {
+    font-family: 'Source Serif';
+    src: url('../fonts/Source_Serif_4/SourceSerif4-VariableFont.ttf');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('../fonts/Anonymous_Pro/AnonymousPro-Regular.ttf');
+    font-weight: 400;
+}
+
+:root {
+    --ff-primary: 'Source Serif', 'Times New Roman', Times, serif;
+    --ff-secondary: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    --ff-tertiary: 'Anonymous Pro', monospace;
+
+    --c-primary: rgb(0, 0, 0);
+    --c-secondary: rgb(71, 91, 98);
+    --c-brand: rgb(0, 134, 180);
+    --c-bg: rgb(255, 255, 255);
+    --c-bg-o20: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+main {
+    padding-bottom: calc(102px + 2rem);
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--c-primary, #000);
+    font-family: var(--ff-secondary, sans-serif);
+}
+
+.page-bg {
+    background: url('../imgs/background-paper.png'), var(--c-bg, #FFFFFF);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    opacity: 0.5;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    main {
+        padding-bottom: calc(238px + 4rem);
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}
