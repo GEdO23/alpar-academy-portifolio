@@ -218,3 +218,12 @@ Recrie o seu site em tabela, mas agora sem usar tabelas! Não se importe com pos
 - O site deve ter tanto conteúdo (mesmo que lorem ipsum ou gerado por IA), que apareça um scroll.
 
 [Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar-table/)
+
+
+### CSS - Desafio 04
+
+<img src="./alpar-table/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
+
+Aplique FLEXBOX no seu site sem tabela desenvolvido no desafio anterior, e organize os conteúdos.
+
+Você também pode usar o FLEXBOX nas suas outras páginas!

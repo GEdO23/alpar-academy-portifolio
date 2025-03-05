@@ -1,6 +1,7 @@
 .about-us-section,
 .our-expertise {
-    margin: 0 240px;
+    max-width: 1140px;
+    margin: 0 auto;
     padding: 100px 0 20px;
 }
 
@@ -23,7 +24,7 @@
     padding: 60px 0;
 }
 
-.our-expertise>section {
+.our-expertise section {
     text-align: center;
 }
 
@@ -38,10 +39,17 @@
     width: 100%;
     padding: 50px 240px 30px;
     background-color: #f8f7fc;
+}
+
+.company-stats>div {
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
 }
 
 .company-stats .key-stats {
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
 }
 
@@ -63,6 +71,7 @@
     font-size: 14px;
     font-weight: 400;
     font-family: var(--font-primary, var(--font-secondary, sans-serif));
+    word-wrap: break-word;
 }
 
 .company-stats .key-stats .icon {
