@@ -217,7 +217,7 @@ Recrie o seu site em tabela, mas agora sem usar tabelas! Não se importe com pos
 - O site deve ter um NAVBAR, que deve ficar fixo no topo do site e seguir o scroll.
 - O site deve ter tanto conteúdo (mesmo que lorem ipsum ou gerado por IA), que apareça um scroll.
 
-[Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar-table/)
+[Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar/)
 
 
 ### CSS - Desafio 04
@@ -227,3 +227,5 @@ Recrie o seu site em tabela, mas agora sem usar tabelas! Não se importe com pos
 Aplique FLEXBOX no seu site sem tabela desenvolvido no desafio anterior, e organize os conteúdos.
 
 Você também pode usar o FLEXBOX nas suas outras páginas!
+
+[Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar/)
