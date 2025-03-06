@@ -229,3 +229,23 @@ Aplique FLEXBOX no seu site sem tabela desenvolvido no desafio anterior, e organ
 Você também pode usar o FLEXBOX nas suas outras páginas!
 
 [Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar/)
+
+### CSS - Desafio 05
+
+Organize a apresentação do seu site (do desafio anterior usando) usando GRID, com a
+estrutura:
+
+<table>
+  <tr>
+    <td colspan="2">CABEÇALHO</td>
+  </tr>
+  <tr>
+    <td>MENU</td>
+    <td>CONTEÚDO</td>
+  </tr>
+  <tr>
+    <td colspan="2">RODAPÉ</td>
+  </tr>
+</table>
+
+Você também pode incluir o GRID nas suas outras páginas!
