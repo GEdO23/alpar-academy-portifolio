@@ -1,0 +1,47 @@
+body {
+    height: 100dvh;
+    display: grid;
+    grid-template-areas: 'header' 'conteudo' 'footer';
+    grid-template-rows: 80px 1fr 350px;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    display: grid;
+    grid-area: conteudo;
+    grid-template-areas: 'hero-banner' 'about-us' 'ov' 'tdr';
+}
+
+main .hero-banner {
+    grid-area: hero-banner;
+}
+
+main .about-us-section {
+    grid-area: about-us;
+}
+
+main>.our-expertise {
+    display: grid;
+    grid-area: ov;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main .company-stats {
+    display: grid;
+    grid-area: tdr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+main .company-stats>.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: repeat(3, 1fr);
+}
