@@ -102,7 +102,7 @@ Suba para o github.
 
 **2° Desafio:**
 
-<img src="./alpar-table/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
+<img src="./alpar/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
 
 Crie uma página de um site de uma empresa, real ou fictícia, utilizando tabelas para definir
 o layout.
@@ -211,7 +211,7 @@ Adicione esse desafio em uma nova pasta chamada "card".
 
 ### CSS - Desafio 03
 
-<img src="./alpar-table/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
+<img src="./alpar/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
 
 Recrie o seu site em tabela, mas agora sem usar tabelas! Não se importe com posicionamento dos elementos, trabalharemos isso em breve, mas apliquem estilos.
 - O site deve ter um NAVBAR, que deve ficar fixo no topo do site e seguir o scroll.
@@ -222,7 +222,7 @@ Recrie o seu site em tabela, mas agora sem usar tabelas! Não se importe com pos
 
 ### CSS - Desafio 04
 
-<img src="./alpar-table/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
+<img src="./alpar/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
 
 Aplique FLEXBOX no seu site sem tabela desenvolvido no desafio anterior, e organize os conteúdos.
 
@@ -231,6 +231,8 @@ Você também pode usar o FLEXBOX nas suas outras páginas!
 [Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar/)
 
 ### CSS - Desafio 05
+
+<img src="./alpar/assets/imgs/logos_alpar_sb.png" align="right" width="200px">
 
 Organize a apresentação do seu site (do desafio anterior usando) usando GRID, com a
 estrutura:
@@ -249,3 +251,5 @@ estrutura:
 </table>
 
 Você também pode incluir o GRID nas suas outras páginas!
+
+[Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar/)
