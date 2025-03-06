@@ -1,9 +1,6 @@
 footer#footer {
     background-color: var(--color-primary, #000);
     color: #fff;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
     padding: 83px 133px;
 }
 
@@ -26,6 +23,7 @@ footer#footer .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
     width: 560px;
     gap: 6px;
 }
@@ -45,6 +43,7 @@ footer#footer section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
     text-align: center;
 }
 
