@@ -8,14 +8,38 @@ body {
     width: 100dvw;
     height: 100dvh;
     background-color: green;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 32px;
+    height: 100%;
+}
+
+aside.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 16px;
+}
+
+aside.menu a.goback-link {
+    height: 2.5rem;
+}
+
+aside.menu a.goback-link img {
+    width: 2.5rem;
+    aspect-ratio: 1/1;
 }
 
 .container {
-    height: 100%;
+    height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 32px;
+    flex-wrap: wrap;
 }
 
 .card {
