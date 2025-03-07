@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: green;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.card {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 600px;
+    position: relative;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background: #fff;
+}
+
+.card-back {
+    background: url(../imgs/red-card-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card:hover .card-back {
+    transform: rotateY(180deg);
+}
+
+.card-symbol-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img.card-symbol {
+    width: 250px;
+}
+
+.card-sm-symbol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 24px;
+}
+
+.card-sm-symbol>h2 {
+    color: #f00;
+    font-size: 50px;
+}
+
+.card-sm-symbol>img {
+    width: 50px;
+}
+
+.card-sm-symbol-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-sm-symbol-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
