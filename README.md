@@ -253,3 +253,8 @@ estrutura:
 Você também pode incluir o GRID nas suas outras páginas!
 
 [Acessar Site](https://gedo23.github.io/AlparAcademy-Portifolio/alpar/)
+
+
+## Créditos
+
+<a href="https://www.flaticon.com/br/icones-gratis/baralho" title="baralho ícones">Baralho ícones criados por surang - Flaticon</a>
