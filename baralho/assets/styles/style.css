@@ -5,15 +5,12 @@
 }
 
 body {
-    width: 100dvw;
-    height: 100dvh;
     background-color: green;
     overflow-x: hidden;
 }
 
 main {
     padding: 32px;
-    height: 100%;
 }
 
 aside.menu {
@@ -34,23 +31,34 @@ aside.menu a.goback-link img {
 }
 
 .container {
-    height: inherit;
+    width: 100%;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 64px 32px;
     flex-wrap: wrap;
 }
 
-.card {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+.card-container {
     width: 400px;
     height: 600px;
-    position: relative;
 }
 
-.card-front,
-.card-back {
+.card-flip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+
+    transition: transform 1s;
+    transition-delay: 0.2s;
+    transform-style: preserve-3d;
+}
+
+.card-face-front,
+.card-face-back {
     position: absolute;
     top: 0;
     right: 0;
@@ -60,55 +68,55 @@ aside.menu a.goback-link img {
     backface-visibility: hidden;
 }
 
-.card-front {
+.card-face-front {
     background: #fff;
+    transform: rotateY(180deg);
+    user-select: none;
 }
 
-.card-back {
+.card-face-back {
     background: url(../imgs/red-card-cover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    transform: rotateY(0deg);
 }
 
-.card:hover .card-back {
-    transform: rotateY(180deg);
+.card-container:hover .card-flip {
+    transform: rotateY(-180deg);
 }
 
-.card-symbol-container {
+img.card-symbol-large {
+    width: 250px;
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
-img.card-symbol {
-    width: 250px;
-}
-
-.card-sm-symbol {
+.card-symbol-small {
+    padding: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    padding: 24px;
 }
 
-.card-sm-symbol>h2 {
-    color: #f00;
+.card-symbol-small>h2 {
     font-size: 50px;
+    color: #f00;
 }
 
-.card-sm-symbol>img {
+.card-symbol-small>img {
     width: 50px;
 }
 
-.card-sm-symbol-tl {
+.card-symbol-top-left {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.card-sm-symbol-br {
+.card-symbol-bottom-right {
     position: absolute;
     bottom: 0;
     right: 0;
