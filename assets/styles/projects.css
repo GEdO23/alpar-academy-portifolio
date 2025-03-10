@@ -18,6 +18,7 @@ section.section-projects nav>ul {
     aspect-ratio: 2/1;
     border-radius: 8px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    user-select: text;
 }
 
 @media only screen and (min-width: 1200px) {

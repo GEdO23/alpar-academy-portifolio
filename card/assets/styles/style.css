@@ -27,6 +27,7 @@ aside.menu a.goback-link {
 aside.menu a.goback-link img {
     width: 2.5rem;
     aspect-ratio: 1/1;
+    user-select: none;
 }
 
 main {
@@ -80,6 +81,7 @@ img.profile-picture {
     aspect-ratio: 1/1;
     margin-bottom: 1rem;
     border-radius: 100%;
+    user-select: none;
 }
 
 .profile-card .profile-details>.profile-name {
@@ -130,6 +132,7 @@ img.profile-picture {
     transform: translateY(-50%);
     width: 1.5rem;
     aspect-ratio: 1/1;
+    user-select: none;
 }
 
 .bg-github {

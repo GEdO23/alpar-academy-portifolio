@@ -61,4 +61,5 @@
 .company-stats .key-stat .icon {
     width: 36px;
     height: 36px;
+    user-select: none;
 }
