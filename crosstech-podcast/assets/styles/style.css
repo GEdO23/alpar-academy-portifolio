@@ -39,6 +39,15 @@ main.page-content {
     padding-bottom: 273px;
 }
 
+a {
+    opacity: 0.5;
+    transition: opacity 400ms ease-in-out;
+}
+
+a:hover {
+    opacity: 1;
+}
+
 @media only screen and (max-width: 712px) {
     header.page-header {
         display: flex;
