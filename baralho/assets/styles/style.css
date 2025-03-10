@@ -28,6 +28,7 @@ aside.menu a.goback-link {
 aside.menu a.goback-link img {
     width: 2.5rem;
     aspect-ratio: 1/1;
+    user-select: none;
 }
 
 .container {

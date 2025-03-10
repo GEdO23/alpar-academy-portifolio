@@ -3,12 +3,12 @@
 
 :root {
     --color-primary: #E59321;
-    --color-on-primary: ##FFF;
-    --color-surface: #FFF;
+    --color-on-primary: #FFFFFF;
+    --color-surface: #FFFFFF;
     --color-on-surface: #000826;
     --color-on-surface-variant: #474E66;
     --color-surface-inverse: #000826;
-    --color-on-surface-inverse: #FFF;
+    --color-on-surface-inverse: #FFFFFF;
 
     --font-primary-family: Arial, Helvetica, sans-serif;
 }
@@ -37,6 +37,20 @@ main.page-content {
     padding: 32px;
     background: var(--color-surface, #FFF);
     padding-bottom: 273px;
+}
+
+a {
+    opacity: 0.5;
+    transition: opacity 400ms ease-in-out;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+::selection {
+    background: var(--color-primary, #000);
+    color: var(--color-on-primary, #FFF);
 }
 
 @media only screen and (max-width: 712px) {

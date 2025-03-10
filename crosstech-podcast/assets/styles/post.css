@@ -40,6 +40,11 @@ article.post>section.post__content>ul.post__audio-list {
     list-style-type: none;
 }
 
+article.post>section.post__content>ul.post__audio-list audio {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
 @media only screen and (max-width: 712px) {
 
     article.post>section.post__content>ul.post__audio-list>li,
