@@ -130,6 +130,11 @@ a:hover {
     opacity: 1;
 }
 
+::selection {
+    background: var(--color-primary, #000);
+    color: #FFF;
+}
+
 .body-text {
     font-weight: 200;
     font-size: 18px;
