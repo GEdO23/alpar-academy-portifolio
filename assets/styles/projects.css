@@ -19,6 +19,12 @@ section.section-projects nav>ul {
     border-radius: 8px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     user-select: text;
+    transform: translate(-10%, -10%) scale(80%);
+    transition: transform 500ms ease-in-out;
+}
+
+.project:hover {
+    transform: translate(0%, 0%) scale(100%);
 }
 
 @media only screen and (min-width: 1200px) {
