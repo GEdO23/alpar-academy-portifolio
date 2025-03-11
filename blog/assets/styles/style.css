@@ -86,7 +86,9 @@ pre {
 }
 
 header#header {
-    background-color: #1865ff;
+    background: linear-gradient(130deg, #1865ff, #440580);
+    background-size: 200% 200%;
+
     color: #fff;
     padding: 16px 32px;
 
@@ -95,6 +97,34 @@ header#header {
     left: 0;
     right: 0;
     height: 100px;
+    animation: gradientBlue 5s linear alternate infinite;
+}
+
+header#header>h1,
+header#header>p {
+    overflow: hidden;
+    animation: showText 1s ease-in-out;
+}
+
+@keyframes showText {
+    0% {
+        transform: translate(-30%) skewX(45deg);
+    }
+
+    100% {
+        transform: translate(0%) skewX(0deg);
+    }
+}
+
+@keyframes gradientBlue {
+
+    0% {
+        background-position: 10% 0%;
+    }
+
+    100% {
+        background-position: 91% 100%;
+    }
 }
 
 header p {
@@ -115,4 +145,39 @@ aside {
 
 aside a {
     color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul a {
+    display: block;
+    opacity: 0.7;
+    transition: opacity 300ms;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav ul a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: all 300ms;
+}
+
+nav ul a.active,
+nav ul a:hover {
+    opacity: 1;
+}
+
+nav ul a.active::before,
+nav ul a:hover::before {
+    left: 0;
 }
