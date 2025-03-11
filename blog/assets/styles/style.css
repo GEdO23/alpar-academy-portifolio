@@ -86,7 +86,9 @@ pre {
 }
 
 header#header {
-    background-color: #1865ff;
+    background: linear-gradient(130deg, #1865ff, #440580);
+    background-size: 200% 200%;
+
     color: #fff;
     padding: 16px 32px;
 
@@ -95,12 +97,13 @@ header#header {
     left: 0;
     right: 0;
     height: 100px;
+    animation: gradientBlue 5s linear alternate infinite;
 }
 
 header#header>h1,
 header#header>p {
     overflow: hidden;
-    animation: showText 2000ms ease-in-out;
+    animation: showText 1s ease-in-out;
 }
 
 @keyframes showText {
@@ -110,6 +113,17 @@ header#header>p {
 
     100% {
         transform: translate(0%) skewX(0deg);
+    }
+}
+
+@keyframes gradientBlue {
+
+    0% {
+        background-position: 10% 0%;
+    }
+
+    100% {
+        background-position: 91% 100%;
     }
 }
 
