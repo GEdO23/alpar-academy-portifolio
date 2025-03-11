@@ -211,6 +211,15 @@ img.profile-picture-photo {
     text-align: center;
     padding: 1rem;
     border-radius: 8px;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.9);
+}
+
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link:focus,
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link:hover {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link>img {
@@ -229,7 +238,7 @@ img.profile-picture-photo {
     transition: background-color 1s;
 }
 
-.bg-github:hover {
+.bg-github:active {
     background-color: #12151a;
 }
 
@@ -239,6 +248,6 @@ img.profile-picture-photo {
     transition: background-color 1s;
 }
 
-.bg-linkedin:hover {
+.bg-linkedin:active {
     background-color: #044381;
 }
