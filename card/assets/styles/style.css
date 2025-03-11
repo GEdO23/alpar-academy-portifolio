@@ -24,10 +24,17 @@ aside.menu a.goback-link {
     height: 2.5rem;
 }
 
+aside.menu a.goback-link:focus>img,
+aside.menu a.goback-link:hover>img {
+    transform: rotate(45deg);
+}
+
 aside.menu a.goback-link img {
     width: 2.5rem;
     aspect-ratio: 1/1;
     user-select: none;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
 }
 
 main {
