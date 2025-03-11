@@ -24,10 +24,17 @@ aside.menu a.goback-link {
     height: 2.5rem;
 }
 
+aside.menu a.goback-link:focus>img,
+aside.menu a.goback-link:hover>img {
+    transform: rotate(45deg);
+}
+
 aside.menu a.goback-link img {
     width: 2.5rem;
     aspect-ratio: 1/1;
     user-select: none;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
 }
 
 main {
@@ -76,12 +83,93 @@ main {
     margin-bottom: 2rem;
 }
 
-img.profile-picture {
+.profile-picture {
+    position: relative;
     width: 8rem;
     aspect-ratio: 1/1;
     margin-bottom: 1rem;
-    border-radius: 100%;
     user-select: none;
+}
+
+img.profile-picture-photo {
+    position: absolute;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.rotate-icons .icon {
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.rotate-icons .icon:nth-child(1) {
+    animation: flyRocket 5s linear 0s infinite;
+}
+
+.rotate-icons .icon:nth-child(2) {
+    animation: flyRocket 5s linear 1s infinite;
+}
+
+.rotate-icons .icon:nth-child(3) {
+    animation: flyRocket 5s linear 2s infinite;
+}
+
+.rotate-icons .icon:nth-child(4) {
+    animation: flyRocket 5s linear 3s infinite;
+}
+
+.rotate-icons .icon:nth-child(5) {
+    animation: flyRocket 5s linear 4s infinite;
+}
+
+.rotate-icons .icon::before {
+    content: '⭐';
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes flyRocket {
+    0% {
+        transform: translate(0em, 0em) rotate(0deg) scale(1.5);
+    }
+
+    12.5% {
+        transform: translate(1em, -2.75em) rotate(-45deg) scale(1);
+    }
+
+    25% {
+        transform: translate(0, -5.5em) rotate(-90deg) scale(1.5);
+    }
+
+    37.5% {
+        transform: translate(-2.75em, -6.5em) rotate(-135deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-5.5em, -5.5em) rotate(-180deg) scale(1.5);
+    }
+
+    62.5% {
+        transform: translate(-6.5em, -2.75em) rotate(-225deg) scale(1);
+    }
+
+    75% {
+        transform: translate(-5.5em, 0) rotate(-270deg) scale(1.5);
+    }
+
+    87.5% {
+        transform: translate(-2.75em, 1em) rotate(-315deg) scale(1);
+    }
+
+    100% {
+        transform: translate(0em, 0em) rotate(-360deg) scale(1.5);
+    }
 }
 
 .profile-card .profile-details>.profile-name {
@@ -123,6 +211,15 @@ img.profile-picture {
     text-align: center;
     padding: 1rem;
     border-radius: 8px;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.9);
+}
+
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link:focus,
+.profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link:hover {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .profile-card nav.profile-socialmedia-nav a.profile-socialmedia-link>img {
@@ -141,7 +238,7 @@ img.profile-picture {
     transition: background-color 1s;
 }
 
-.bg-github:hover {
+.bg-github:active {
     background-color: #12151a;
 }
 
@@ -151,6 +248,6 @@ img.profile-picture {
     transition: background-color 1s;
 }
 
-.bg-linkedin:hover {
+.bg-linkedin:active {
     background-color: #044381;
 }

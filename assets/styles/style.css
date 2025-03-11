@@ -66,7 +66,25 @@ a:hover {
     line-height: 150%;
     color: var(--c-primary, #000);
     font-family: var(--ff-secondary, sans-serif);
+    position: relative;
 }
+
+main h2.title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    background: #000;
+    transition: all 1s ease-in-out;
+}
+
+main h2.title:hover::after {
+    width: 50rem;
+    max-width: 100%;
+}
+
 
 .page-bg {
     background: url('../imgs/background-paper.png'), var(--c-bg, #FFFFFF);
