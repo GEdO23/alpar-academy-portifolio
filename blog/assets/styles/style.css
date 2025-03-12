@@ -190,7 +190,7 @@ nav ul a:hover::before {
     right: 32px;
     transform: translateY(-50%);
     border: 0;
-    background: travfcnsparent;
+    background: transparent;
     cursor: pointer;
 }
 
@@ -200,6 +200,7 @@ nav ul a:hover::before {
     background-color: #FFFFFF;
     border-radius: 5px;
     position: relative;
+    transition: transform 0.3s;
 }
 
 .menu-button>.icon::before {
@@ -211,6 +212,8 @@ nav ul a:hover::before {
     position: absolute;
     left: 0;
     top: -10px;
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
 .menu-button>.icon::after {
@@ -222,4 +225,19 @@ nav ul a:hover::before {
     position: absolute;
     left: 0;
     bottom: -10px;
+    transition: transform 0.3s;
+}
+
+.menu-button:hover>.icon {
+    transform: rotate(-45deg);
+}
+
+.menu-button:hover>.icon::before {
+    opacity: 0;
+}
+
+.menu-button:hover>.icon::after {
+    left: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
 }
