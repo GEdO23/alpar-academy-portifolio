@@ -1,12 +1,19 @@
 /**
  * @file Adiciona posts da Alpar Rocket Blog dinamicamente com JavaScript
  * @author Gabriel Eringer de Oliveira <gabriel.eringer.23@gmail.com>
- * 
- * @typedef {{id: string, title: string, content: string}} blogPost
+ * @module blog/posts
  */
 
 /**
- * @type blogPost[]
+ * Post para o blog
+ * @typedef {Object} post
+ * @property {string} id Identificador único do post.
+ * @property {string} title Título principal do post.
+ * @property {string} content Conteúdo do post.
+ */
+
+/**
+ * @type post[]
  */
 const posts = [
     {
@@ -371,7 +378,7 @@ const posts = [
 /**
  * Adiciona um post para o o conteúdo principal da página.
  * 
- * @param {blogPost} post
+ * @param {post} post - O post a ser adicionado
  * @returns {void}
  * @example
  * const post = {
