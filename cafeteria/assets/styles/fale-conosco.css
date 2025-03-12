@@ -1,0 +1,38 @@
+main#main>article {
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 2em auto;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input,
+textarea {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    background: rgba(220, 151, 61, 0.2);
+    color: #3D2300;
+}
+
+form>button {
+    padding: 1em;
+    border: none;
+    border-radius: 1em;
+    background: #DC973D;
+    color: #3D2300;
+    font-weight: 700;
+}

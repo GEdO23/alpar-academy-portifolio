@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-areas: 'header' 'main';
+    grid-template-rows: 4rem auto 1fr;
+    overflow-x: hidden;
+}
+
+h2,
+h3,
+p {
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+th,
+td {
+    padding: 1em;
+}
+
+header#header {
+    grid-area: header;
+    width: 100dvw;
+    display: flex;
+    padding: 1em;
+    background: rgb(220, 151, 61);
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+}
+
+.menu .logo {
+    height: 32px;
+}
+
+.menu ul,
+.menu .contact-us {
+    display: none;
+}
+
+main#main {
+    grid-area: main;
+    margin: 2em 1em 4em;
+}
+
+article.cardapio ul,
+article.cardapio ol {
+    padding-inline-start: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+article.cardapio li {
+    margin-bottom: 0.5em;
+}
+
+article.cardapio ul.cardapio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em 4em;
+}
+
+article.cardapio ul.cardapio-list>li {
+    flex: 1;
+}
+
+@media (min-width:850px) {
+    .menu .contact-us {
+        display: block;
+        padding: 0.5em 1em;
+        border: 2px solid rgb(61, 35, 0);
+        border-radius: 6em;
+        transition: background 250ms ease-in-out, color 250ms ease-in-out;
+        text-align: center;
+    }
+
+    .menu .contact-us:hover {
+        background: rgb(61, 35, 0);
+        color: rgb(220, 151, 61);
+    }
+
+    .menu>ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        gap: 2em;
+        list-style: none;
+    }
+
+    .menu>ul>li {
+        position: relative;
+        opacity: 0.8;
+    }
+
+    .menu>ul>li::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 2px;
+        border-radius: 16px;
+        height: 2px;
+        background: rgb(61, 35, 0);
+        transition: width 500ms;
+    }
+
+    .menu>ul>li:hover {
+        opacity: 1;
+    }
+
+    .menu>ul>li:hover::after {
+        content: '';
+        width: 100%;
+    }
+
+    .menu a {
+        font-weight: 700;
+        color: rgb(61, 35, 0);
+    }
+
+    main#main>article {
+        margin: 0 auto;
+        max-width: 80em;
+    }
+
+    article.cardapio ul.cardapio-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1em 4em;
+    }
+}
