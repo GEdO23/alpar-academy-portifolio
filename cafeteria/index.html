@@ -7,70 +7,34 @@
     <meta name="description" content="Cafeteria alemã ficticia, desenvolvida por Gabriel Eringer de Oliveira (GEdO)">
     <meta name="keywords" content="coffee, coffee shop">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/imgs/favicon.png" type="image/x-icon" />
     <title>Eringer Kaffee</title>
+
+    <link rel="icon" href="./assets/imgs/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
 <body>
-    <header>
-        <img src="./assets/imgs/logo/EringerKaffee-Logo-VariantPrimary.png" alt="Eringer Kaffe">
+
+    <header id="header">
+        <img src="./assets/imgs/logo/Logo-Icon.svg" alt="Eringer Kaffe">
+    </header>
+
+    <aside id="menu">
         <nav>
             <ul>
-                <li><a href="./" aria-label="Ir para página principal">Página principal</a></li>
+                <li><a href="./" aria-label="Ir para página principal">Página Principal</a></li>
+                <li><a href="./horarios.html" aria-label="Ir para página de horários">Horários de Atendimento</a></li>
                 <li><a href="./fale-conosco.html" aria-label="Ir para página de contato">Fale Conosco</a></li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
-    <main>
-        <article>
-            <h1>Bem vindo a Eringer Kaffee!</h1>
-            <p>O sabor que desperta seu dia!</p>
-        </article>
-
-        <article>
-            <h2>Horários de Funcionamento</h2>
-            <table cellspacing="0" border="1" cellpadding="8">
-                <thead>
-                    <tr>
-                        <th>Horarios</th>
-                        <th>Segunda</th>
-                        <th>Terça</th>
-                        <th>Quarta</th>
-                        <th>Quinta</th>
-                        <th>Sexta</th>
-                        <th>Sábado</th>
-                        <th>Domingos e Feriados</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="trHorariosManha">
-                        <td><strong>Manhã</strong></td>
-                        <td>08:00<br>12:00</td>
-                        <td rowspan="2">Fechado</td>
-                        <td>08:00<br>12:00</td>
-                        <td>08:00<br>12:00</td>
-                        <td>08:00<br>12:00</td>
-                        <td>08:00<br>12:00</td>
-                        <td rowspan="2">08:00<br>12:00</td>
-                    </tr>
-                    <tr id="trHorariosTarde">
-                        <td><strong>Tarde</strong></td>
-                        <td>14:00<br>18:00</td>
-                        <td>14:00<br>18:00</td>
-                        <td>14:00<br>18:00</td>
-                        <td>14:00<br>18:00</td>
-                        <td>14:00<br>18:00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-
-        <article>
+    <main id="main">
+        <article class="cardapio">
             <h2>Cardápio</h2>
-            <ul>
+            <ul class="cardapio-list">
                 <li>
-                    <section>
+                    <section class="cardapio-itens">
                         <h3>Bebidas</h3>
                         <ol data-cardapio-category="bebidas">
                             <li>
@@ -119,7 +83,7 @@
                     </section>
                 </li>
                 <li>
-                    <section>
+                    <section class="cardapio-itens">
                         <h3>Salgados</h3>
                         <ol data-cardapio-category="salgados">
                             <li>
@@ -169,7 +133,7 @@
                     </section>
                 </li>
                 <li>
-                    <section>
+                    <section class="cardapio-itens">
                         <h3>Doces</h3>
                         <ol data-cardapio-category="doces">
                             <li>

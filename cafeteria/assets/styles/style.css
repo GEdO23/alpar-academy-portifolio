@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-areas: 'header' 'menu' 'main';
+    grid-template-rows: 4rem auto 1fr;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+h2,
+h3,
+p {
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+header#header {
+    grid-area: header;
+    width: 100dvw;
+    display: flex;
+    padding: 1em;
+    background: #DC973D;
+}
+
+aside#menu {
+    grid-area: menu;
+    width: 100dvw;
+    padding: 1em;
+    background: #E3AB62;
+}
+
+aside#menu>nav>ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    list-style: none;
+}
+
+aside#menu>nav>ul>li {
+    text-align: center;
+}
+
+aside#menu>nav>ul>li:first-child {
+    text-align: start;
+}
+
+aside#menu>nav>ul>li:last-child {
+    text-align: end;
+}
+
+aside#menu>nav a {
+    color: #3D2300;
+}
+
+main#main {
+    grid-area: main;
+    margin: 2rem 1rem 4rem;
+}
+
+article.cardapio ul,
+article.cardapio ol {
+    padding-inline-start: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+article.cardapio li {
+    margin-bottom: 0.5em;
+}
+
+article.cardapio ul.cardapio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em 4em;
+}
+
+article.cardapio ul.cardapio-list>li {
+    flex: 1;
+}
