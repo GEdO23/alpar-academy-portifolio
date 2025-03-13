@@ -1,2 +1,16 @@
-.vscode/
+# Node modules
 node_modules/
+
+# Cypress artifacts
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+
+# Cypress configuration file (opcional, se for específico para o ambiente local)
+cypress.json
+
+# Outros arquivos temporários e gerados
+cypress/fixtures/
+cypress/integration/
+cypress/plugins/
+cypress/support/
