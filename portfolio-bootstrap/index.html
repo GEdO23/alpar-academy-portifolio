@@ -165,7 +165,11 @@
 
         let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : [];
 
+        if (getData.length == 0) {
+            registerDefaultUsers();
+        }
         showInfo();
+
 
         formEl.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -207,6 +211,29 @@
                 getData.splice(index, 1);
                 localStorage.setItem('userProfile', JSON.stringify(getData))
                 showInfo();
+            }
+        }
+
+        function registerDefaultUsers() {
+            getData.push({
+                nome: 'Gabriel Eringer',
+                email: 'gabriel.eringer@alpar.com.br',
+                cargo: 'Desenvolvedor(a)'
+            });
+            getData.push({
+                nome: 'Cintia Oliveira',
+                email: 'cintia.oliveira@alpar.com.br',
+                cargo: 'Coordenador(a) de treinamento'
+            });
+            getData.push({
+                nome: 'Thaís Lima David',
+                email: 'thais.lima@alpar.com.br',
+                cargo: 'Analista de Desenvolvimento Humano e Organizacional'
+            });
+
+            if (getData.length > 0) {
+                document.querySelectorAll('.userDetails').forEach(info => info.remove());
+                localStorage.setItem('userProfile', JSON.stringify(getData))
             }
         }
 
