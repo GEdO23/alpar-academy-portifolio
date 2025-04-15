@@ -1,310 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="GEdO">
+    <meta name="description"
+        content="Portifólio de Gabriel Eringer de Oliveira (GEdO), desenvolvedor Full Stack e Android">
+    <meta name="keywords" content="portifolio, gedo, full-stack, android, developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap demo</title>
+    <title>Portfólio Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 
 <body>
     <style>
-        .text-shadow {
-            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        .page-bg {
+            background: url('../assets/imgs/background-paper.png'), #FFF;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
         }
 
-        .hero-banner {
-            background-image: url('./assets/imgs/hero_banner-background.png');
-            background-size: cover;
+        header>img.photo {
+            aspect-ratio: 1/1;
+            user-select: none;
+        }
+
+        .project {
+            aspect-ratio: 2/1;
+            user-select: text;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .project {
+                transform: translate(-10%, -10%) scale(80%);
+                transition: transform 500ms ease-in-out;
+            }
+
+            .project:hover {
+                transform: translate(0%, 0%) scale(100%);
+            }
         }
     </style>
 
-    <header>
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
-            <div class="container">
-                <a href="#" class="navbar-brand">GEdO Tech</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown"
-                    aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-
-                <div class="collapse navbar-collapse" id="navbarDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Página Inicial</a>
-                        </li>
-                        <li class="nav-item"><a href="#services" class="nav-link">Serviços</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- <div class="page-bg position-fixed top-0 end-0 bottom-0 start-0 z-n1 opacity-50"></div> -->
 
     <main>
-        <div class="position-relative hero-banner py-5 container-xxl">
-            <article class="container text-white">
-                <h1 class="h1 text-shadow ">Precisa de um App?</h1>
-                <p class="lead text-shadow pt-2">A GEdO Tech proporciona aos seus usuários a melhor experiência
-                    digital!
+        <header class="container d-flex p-3 justify-content-between align-items-center mt-3">
+            <div class="me-lg-5">
+                <h1 class="display-4 mb-4 lh-sm">Gabriel Eringer de Oliveira</h1>
+                <h2 class="lead font-monospace lh-sm">Desenvolvedor Full Stack | UX/UI Designer | Apaixonado por
+                    Tecnologia
+                </h2>
+            </div>
+            <img class="photo rounded-circle d-none d-lg-inline w-25 h-25" src="../assets/imgs/foto.jpg"
+                alt="Foto de Gabriel Eringer">
+        </header>
+
+        <section class="container mt-5 mb-5">
+            <h2 class="display-6 border-bottom pb-2">Sobre mim</h2>
+            <div class="mt-4">
+                <p class="lh-lg">Olá! 👋 Sou Gabriel Eringer, formado em <mark>Análise e Desenvolvimento de
+                        Sistemas</mark> pela
+                    <a class="text-primary fw-semibold" href="https://www.fiap.com.br/"
+                        title="Visitar o site da FIAP">FIAP</a>, e tenho
+                    uma
+                    verdadeira paixão por tecnologia.
                 </p>
-                <a href="#" class="btn btn-primary mt-3 shadow">Entrar em contato</a>
-            </article>
-        </div>
-        <article id="services" class="container py-4 mb-4">
-            <h2 class="h1 mt-4">Serviços</h2>
-            <div class="row mt-5">
-                <section class="mb-4 col-sm col-md-6 col-xl-4">
-                    <h3 class="h3">Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in
-                        hendrerit urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-                        vitae
-                        mattis tellus.</p>
-                </section>
-                <section class="mb-4 col-sm col-md-6 col-xl-4">
-                    <h3 class="h3">Mobile Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                        urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-                        vitae
-                        mattis tellus.</p>
-                </section>
-                <section class="col-sm col-md-6 col-xl-4">
-                    <h3 class="h3">UX/UI Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                        urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-                        vitae
-                        mattis tellus.</p>
-                </section>
+                <p class="lh-lg">
+                    Meu foco é em <mark>desenvolvimento Full Stack</mark>, com uma grande preferência por
+                    Front-end e
+                    <mark><abbr title="User Experience">UX</abbr>/<abbr title="User Interface">UI</abbr> Design</mark>.
+                    Com um olhar sempre voltado para a experiência do usuário, busco criar soluções
+                    inovadoras que não
+                    apenas funcionem, mas também encantem quem as usa. 💻✨
+                </p>
+                <p class="lh-lg">
+                    Minha experiência vai além da programação: desenvolvo interfaces que são intuitivas, fáceis de usar
+                    e visualmente atraentes.
+                    <strong class="fw-semibold">Acredito que a combinação de um design centrado no usuário com um
+                        backend
+                        sólido é a chave
+                        para
+                        entregar soluções de sucesso.</strong>
+                </p>
             </div>
-        </article>
-        <article id="users-table" class="container">
-            <h2 class="h1 mt-4">Usuários</h2>
-            <div class="table-responsive mt-4">
-                <table class="table table-hover table-bordered">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">E-mail</th>
-                            <th scope="col">Cargo</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Deletar</th>
-                            <th scope="col">Visualizar</th>
-                        </tr>
-                    </thead>
-                    <tbody id="data">
-                    </tbody>
-                </table>
-                <button id="btnCadastrarNovoUsuario" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#userForm">Cadastrar novo
-                    usuário</button>
-            </div>
-        </article>
-        <div class="modal fade" id="userForm">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="h2" id="formTitle"></h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="#" id="myForm">
-                            <div class="form-group">
-                                <label for="nomeInput">Nome</label>
-                                <input type="text" placeholder="Digite o seu nome e sobrenome" class="form-control mt-2"
-                                    id="nomeInput" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <label for="emailInput">E-mail</label>
-                                <input type="text" placeholder="Digite o seu e-mail profissional"
-                                    class="form-control mt-2" id="emailInput" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <label for="cargoInput">Cargo</label>
-                                <input type="text" placeholder="Digite o cargo que você ocupa atualmente"
-                                    class="form-control mt-2" id="cargoInput" required>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button id="btnModalSubmit" type="submit" form="myForm" class="btn btn-primary submit"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
+
+        <section class="container mb-5">
+            <h2 class="display-6 border-bottom pb-2">Projetos</h2>
+            <nav class="mt-4">
+                <ul class="list-unstyled row g-4">
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="./cafeteria/"
+                            title="Visitar site do projeto Eringer Kaffee" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-eringer_kaffee.png"
+                                alt="Eringer Kaffee">
+                        </a></li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href=" ./alpar-table/"
+                            title="Visitar site do projeto Alpar Table" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-alpar_table.png" alt="Alpar Table">
+                        </a>
+                    </li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="./alpar/"
+                            title="Visitar site do projeto Alpar" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-alpar.png" alt="Alpar">
+                        </a></li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="./crosstech-podcast/"
+                            title="Visitar site do projeto CrossTech" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-crosstech.png" alt="CrossTech">
+                        </a></li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="./blog/"
+                            title="Visitar site do projeto Alpar Rocket Blog" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-alpar_rocket_blog.png"
+                                alt="Alpar Rocket Blog">
+                        </a></li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="./card/"
+                            title="Visitar site do projeto Cartão de Perfil" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-cartao_de_perfil.png"
+                                alt="Cartão de Perfil">
+                        </a></li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="./baralho/"
+                            title="Visitar site do projeto de Baralho" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-baralho.png" alt="Baralho">
+                        </a></li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="#"
+                            title="Visitar site do projeto de Portfólio em Bootstrap" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-portfolio-bootstrap.png"
+                                alt="Portfólio Bootstrap">
+                        </a></li>
+                    <li class="col-sm-auto col-md-6 col-lg-4 col-xxl-3"><a href="./gedotech/"
+                            title="Visitar site do projeto do site da GEdO Tech em Bootstrap" target="_self">
+                            <img class="project img-fluid rounded shadow"
+                                src="../assets/imgs/project-covers/project_cover-gedotech_bootstrap.png"
+                                alt="Site da GEdO Tech em Bootstrap">
+                        </a></li>
+                </ul>
+            </nav>
+        </section>
     </main>
 
-    <footer class="mt-5">
-        <div class="bg-black text-white container-fluid py-4">
-            <h2 class="display-5 text-center">GEdO Tech</h2>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-white opacity-50">Página Inicial</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link px-2 text-white opacity-50">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-white opacity-50">Contato</a></li>
-            </ul>
+    <footer class="shadow-lg py-5">
+        <div class="container">
+            <h2 class="h3 mb-4">Contato</h2>
+            <nav>
+                <ul class="list-unstyled row g-3">
+                    <li class="col-auto"><a href="mailto:gabriel.eringer.23@gmail.com"
+                            title="gabriel.eringer.23@gmail.com" class="text-primary text-decoration-none">E-mail</a>
+                    </li>
+                    <li class="col-auto"><a href="https://www.linkedin.com/in/gabriel-eringer-de-oliveira/"
+                            title="Visitar página de LinkedIn" target="_blank"
+                            class="text-primary text-decoration-none">LinkedIn</a></li>
+                </ul>
+            </nav>
         </div>
-        <p class="text-center text-muted pt-3">© 2021 Company, Inc</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-
-    <script>
-        const formEl = document.getElementById('myForm');
-        const formTitleEl = document.getElementById('formTitle');
-        const nomeInputEl = document.getElementById('nomeInput');
-        const emailInputEl = document.getElementById('emailInput');
-        const cargoInputEl = document.getElementById('cargoInput');
-        const btnCadastrarNovoUsuario = document.getElementById('btnCadastrarNovoUsuario');
-        const dataEl = document.getElementById('data');
-        const modalFooter = document.querySelector('.modal-footer');
-        const btnModalSubmitEl = document.getElementById('btnModalSubmit');
-        let isEdit = false, editId;
-
-        let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : [];
-
-        if (getData.length == 0) {
-            registerDefaultUsers();
-        }
-        showInfo();
-
-        btnCadastrarNovoUsuario.addEventListener('click', (e) => {
-            formTitleEl.innerText = "Cadastrar usuário";
-            btnModalSubmitEl.innerText = 'Cadastrar'
-
-            formEl.reset();
-
-            modalFooter.hidden = false;
-
-            nomeInputEl.readOnly = false;
-            emailInputEl.readOnly = false;
-            cargoInputEl.readOnly = false;
-
-            nomeInputEl.classList.remove('form-control-plaintext');
-            emailInputEl.classList.remove('form-control-plaintext');
-            cargoInputEl.classList.remove('form-control-plaintext');
-        })
-
-        formEl.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const info = {
-                nome: nomeInputEl.value,
-                email: emailInputEl.value,
-                cargo: cargoInputEl.value
-            };
-
-            if (!isEdit) {
-                getData.push(info);
-                formEl.reset();
-            } else {
-                getData[editId] = info
-            }
-
-            localStorage.setItem('userProfile', JSON.stringify(getData));
-
-            showInfo();
-        })
-
-        function showInfo() {
-            document.querySelectorAll('.userDetails').forEach(info => info.remove());
-            getData.forEach((element, index) => {
-                let createElement = `<tr class="userDetails">
-                            <th class="align-middle" scope="row">${index + 1}</th>
-                            <td class="align-middle">${element.nome}</td>
-                            <td class="align-middle">${element.email}</td>
-                            <td class="align-middle">${element.cargo}</td>
-                            
-                            <td class="align-middle text-center"><button type="button" class="btn" data-bs-toggle="modal"
-                    data-bs-target="#userForm" onclick="editInfo(${index})"><img src="./assets/icons/pen.svg" alt="Editar"></button></td>
-                            <td class="align-middle text-center"><button type="button" class="btn" onclick="deleteInfo(${index})"><img src="./assets/icons/trash.svg" alt="Deletar"></button></td>
-                            <td class="align-middle text-center"><button type="button" class="btn" data-bs-toggle="modal"
-                    data-bs-target="#userForm" onclick="viewInfo(${index})"><img src="./assets/icons/eye.svg" alt="Visualizar"></button></td>
-                        </tr>`;
-                dataEl.innerHTML += createElement;
-            })
-        }
-
-        function editInfo(index) {
-            formTitleEl.innerText = "Editar usuário";
-            btnModalSubmitEl.innerText = 'Atualizar'
-
-            isEdit = true
-            editId = index
-
-            modalFooter.hidden = false;
-
-            let usuario = getData[index];
-            nomeInputEl.value = usuario.nome;
-            emailInputEl.value = usuario.email;
-            cargoInputEl.value = usuario.cargo;
-
-            nomeInputEl.readOnly = false;
-            emailInputEl.readOnly = false;
-            cargoInputEl.readOnly = false;
-
-            nomeInputEl.classList.remove('form-control-plaintext');
-            emailInputEl.classList.remove('form-control-plaintext');
-            cargoInputEl.classList.remove('form-control-plaintext');
-        }
-
-        function deleteInfo(index) {
-            if (confirm("Tem certeza que deseja deletar este usuário?")) {
-                getData.splice(index, 1);
-                localStorage.setItem('userProfile', JSON.stringify(getData))
-                showInfo();
-            }
-        }
-
-        function viewInfo(index) {
-            formTitleEl.innerText = "Dados do usuário";
-
-            modalFooter.hidden = true;
-
-            let usuario = getData[index];
-            nomeInputEl.value = usuario.nome;
-            emailInputEl.value = usuario.email;
-            cargoInputEl.value = usuario.cargo;
-
-            nomeInputEl.readOnly = true;
-            emailInputEl.readOnly = true;
-            cargoInputEl.readOnly = true;
-
-            nomeInputEl.classList.add('form-control-plaintext');
-            emailInputEl.classList.add('form-control-plaintext');
-            cargoInputEl.classList.add('form-control-plaintext');
-        }
-
-        function registerDefaultUsers() {
-            getData.push({
-                nome: 'Gabriel Eringer',
-                email: 'gabriel.eringer@alpar.com.br',
-                cargo: 'Desenvolvedor(a)'
-            });
-            getData.push({
-                nome: 'Cintia Oliveira',
-                email: 'cintia.oliveira@alpar.com.br',
-                cargo: 'Coordenador(a) de treinamento'
-            });
-            getData.push({
-                nome: 'Thaís Lima David',
-                email: 'thais.lima@alpar.com.br',
-                cargo: 'Analista de Desenvolvimento Humano e Organizacional'
-            });
-
-            if (getData.length > 0) {
-                document.querySelectorAll('.userDetails').forEach(info => info.remove());
-                localStorage.setItem('userProfile', JSON.stringify(getData))
-            }
-        }
-
-    </script>
 </body>
 
 </html>
