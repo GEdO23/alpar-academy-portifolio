@@ -99,7 +99,7 @@
                     <tbody id="data">
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                <button id="btnCadastrarNovoUsuario" type="button" class="btn btn-primary" data-bs-toggle="modal"
                     data-bs-target="#userForm">Cadastrar novo
                     usuário</button>
             </div>
@@ -108,7 +108,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="h2">Cadastro de usuário</h2>
+                        <h2 class="h2" id="formTitle"></h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
                     <div class="modal-body">
@@ -131,8 +131,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" form="myForm" class="btn btn-primary submit">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="btnModalSubmit" type="submit" form="myForm" class="btn btn-primary submit"></button>
                     </div>
                 </div>
             </div>
@@ -157,11 +157,15 @@
 
     <script>
         const formEl = document.getElementById('myForm');
+        const formTitleEl = document.getElementById('formTitle');
         const nomeInputEl = document.getElementById('nomeInput');
         const emailInputEl = document.getElementById('emailInput');
         const cargoInputEl = document.getElementById('cargoInput');
-        const btnSubmit = document.getElementById('btnCadastrarUsuario');
-        const data = document.getElementById('data');
+        const btnCadastrarNovoUsuario = document.getElementById('btnCadastrarNovoUsuario');
+        const dataEl = document.getElementById('data');
+        const modalFooter = document.querySelector('.modal-footer');
+        const btnModalSubmitEl = document.getElementById('btnModalSubmit');
+        let isEdit = false, editId;
 
         let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : [];
 
@@ -170,6 +174,22 @@
         }
         showInfo();
 
+        btnCadastrarNovoUsuario.addEventListener('click', (e) => {
+            formTitleEl.innerText = "Cadastrar usuário";
+            btnModalSubmitEl.innerText = 'Cadastrar'
+
+            formEl.reset();
+
+            modalFooter.hidden = false;
+
+            nomeInputEl.readOnly = false;
+            emailInputEl.readOnly = false;
+            cargoInputEl.readOnly = false;
+
+            nomeInputEl.classList.remove('form-control-plaintext');
+            emailInputEl.classList.remove('form-control-plaintext');
+            cargoInputEl.classList.remove('form-control-plaintext');
+        })
 
         formEl.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -180,13 +200,16 @@
                 cargo: cargoInputEl.value
             };
 
-            getData.push(info);
+            if (!isEdit) {
+                getData.push(info);
+                formEl.reset();
+            } else {
+                getData[editId] = info
+            }
 
             localStorage.setItem('userProfile', JSON.stringify(getData));
 
             showInfo();
-
-            form.reset();
         })
 
         function showInfo() {
@@ -198,12 +221,37 @@
                             <td class="align-middle">${element.email}</td>
                             <td class="align-middle">${element.cargo}</td>
                             
-                            <td class="align-middle text-center"><button type="button" class="btn"><img src="./assets/icons/pen.svg" alt="Editar"></button></td>
+                            <td class="align-middle text-center"><button type="button" class="btn" data-bs-toggle="modal"
+                    data-bs-target="#userForm" onclick="editInfo(${index})"><img src="./assets/icons/pen.svg" alt="Editar"></button></td>
                             <td class="align-middle text-center"><button type="button" class="btn" onclick="deleteInfo(${index})"><img src="./assets/icons/trash.svg" alt="Deletar"></button></td>
-                            <td class="align-middle text-center"><button type="button" class="btn"><img src="./assets/icons/eye.svg" alt="Visualizar"></button></td>
+                            <td class="align-middle text-center"><button type="button" class="btn" data-bs-toggle="modal"
+                    data-bs-target="#userForm" onclick="viewInfo(${index})"><img src="./assets/icons/eye.svg" alt="Visualizar"></button></td>
                         </tr>`;
-                data.innerHTML += createElement;
+                dataEl.innerHTML += createElement;
             })
+        }
+
+        function editInfo(index) {
+            formTitleEl.innerText = "Editar usuário";
+            btnModalSubmitEl.innerText = 'Atualizar'
+
+            isEdit = true
+            editId = index
+
+            modalFooter.hidden = false;
+
+            let usuario = getData[index];
+            nomeInputEl.value = usuario.nome;
+            emailInputEl.value = usuario.email;
+            cargoInputEl.value = usuario.cargo;
+
+            nomeInputEl.readOnly = false;
+            emailInputEl.readOnly = false;
+            cargoInputEl.readOnly = false;
+
+            nomeInputEl.classList.remove('form-control-plaintext');
+            emailInputEl.classList.remove('form-control-plaintext');
+            cargoInputEl.classList.remove('form-control-plaintext');
         }
 
         function deleteInfo(index) {
@@ -212,6 +260,25 @@
                 localStorage.setItem('userProfile', JSON.stringify(getData))
                 showInfo();
             }
+        }
+
+        function viewInfo(index) {
+            formTitleEl.innerText = "Dados do usuário";
+
+            modalFooter.hidden = true;
+
+            let usuario = getData[index];
+            nomeInputEl.value = usuario.nome;
+            emailInputEl.value = usuario.email;
+            cargoInputEl.value = usuario.cargo;
+
+            nomeInputEl.readOnly = true;
+            emailInputEl.readOnly = true;
+            cargoInputEl.readOnly = true;
+
+            nomeInputEl.classList.add('form-control-plaintext');
+            emailInputEl.classList.add('form-control-plaintext');
+            cargoInputEl.classList.add('form-control-plaintext');
         }
 
         function registerDefaultUsers() {
