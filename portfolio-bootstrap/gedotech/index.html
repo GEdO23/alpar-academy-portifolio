@@ -43,6 +43,7 @@
     </header>
 
     <main>
+        <!-- HERO -->
         <div class="position-relative hero-banner py-5 container-xxl">
             <article class="container text-white">
                 <h1 class="h1 text-shadow ">Precisa de um App?</h1>
@@ -52,6 +53,8 @@
                 <a href="#" class="btn btn-primary mt-3 shadow">Entrar em contato</a>
             </article>
         </div>
+
+        <!-- SERVIÇOS -->
         <article id="services" class="container py-4 mb-4">
             <h2 class="h1 mt-4">Serviços</h2>
             <div class="row mt-5">
@@ -81,7 +84,9 @@
                 </section>
             </div>
         </article>
-        <article id="users-table" class="container">
+
+        <!-- TABELA DE USUARIOS -->
+        <article class="container">
             <h2 class="h1 mt-4">Usuários</h2>
             <div class="table-responsive mt-4">
                 <table class="table table-hover table-bordered">
@@ -96,44 +101,55 @@
                             <th scope="col">Visualizar</th>
                         </tr>
                     </thead>
-                    <tbody id="data">
+                    <tbody id="tabelaUsuarios">
                     </tbody>
                 </table>
-                <button id="btnCadastrarNovoUsuario" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#userForm">Cadastrar novo
+                <button onclick="configurarCadastroDeUsuario()" type="button" class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#usuarioFormModal">Cadastrar novo
                     usuário</button>
             </div>
         </article>
-        <div class="modal fade" id="userForm">
+
+        <!-- MODAL FORMULÁRIO DE USUÁRIO -->
+        <div class="modal fade" id="usuarioFormModal">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
+
                     <div class="modal-header">
                         <h2 class="h2" id="formTitle"></h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
+
                     <div class="modal-body">
-                        <form action="#" id="myForm">
+                        <form action="#" id="usuarioForm">
+
                             <div class="form-group">
                                 <label for="nomeInput">Nome</label>
                                 <input type="text" placeholder="Digite o seu nome e sobrenome" class="form-control mt-2"
                                     id="nomeInput" required>
                             </div>
+
                             <div class="form-group mt-3">
                                 <label for="emailInput">E-mail</label>
                                 <input type="text" placeholder="Digite o seu e-mail profissional"
                                     class="form-control mt-2" id="emailInput" required>
                             </div>
+
                             <div class="form-group mt-3">
                                 <label for="cargoInput">Cargo</label>
                                 <input type="text" placeholder="Digite o cargo que você ocupa atualmente"
                                     class="form-control mt-2" id="cargoInput" required>
                             </div>
+
                         </form>
                     </div>
-                    <div class="modal-footer">
+
+                    <div id="usuarioFormModalFooter" class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button id="btnModalSubmit" type="submit" form="myForm" class="btn btn-primary submit"></button>
+                        <button id="btnModalSubmit" onclick="enviarDadosUsuario()" type="submit" form="myForm"
+                            class="btn btn-primary submit"></button>
                     </div>
+
                 </div>
             </div>
         </div>
