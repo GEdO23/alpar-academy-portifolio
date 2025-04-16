@@ -19,6 +19,16 @@
             background-image: url('./assets/imgs/hero_banner-background.png');
             background-size: cover;
         }
+
+        .success-icon {
+            width: 1rem;
+            aspect-ratio: 1/1;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%230a3622' width='8' height='8' viewBox='0 0 16 16'%3e%3cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/%3e%3c/svg%3e");
+        }
     </style>
 
     <header>
@@ -55,8 +65,8 @@
         </div>
 
         <!-- SERVIÇOS -->
-        <article id="services" class="container py-4 mb-4">
-            <h2 class="h1 mt-4">Serviços</h2>
+        <article id="services" class="container my-5">
+            <h2 class="h1">Serviços</h2>
             <div class="row mt-5">
                 <section class="mb-4 col-sm col-md-6 col-xl-4">
                     <h3 class="h3">Web Development</h3>
@@ -86,9 +96,9 @@
         </article>
 
         <!-- TABELA DE USUARIOS -->
-        <article class="container">
-            <h2 class="h1 mt-4">Usuários</h2>
-            <div class="table-responsive mt-4">
+        <article class="container my-5">
+            <h2 class="h1 mb-4">Usuários</h2>
+            <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead class="table-dark">
                         <tr>
@@ -108,6 +118,63 @@
                     data-bs-toggle="modal" data-bs-target="#usuarioFormModal">Cadastrar novo
                     usuário</button>
             </div>
+        </article>
+
+        <article class="container my-5">
+            <h2 class="h1 mb-4">Contato</h2>
+            <form id="formContato" class="row gy-4 gx-3 needs-validation" novalidate>
+                <div class="col-12 col-lg-6">
+                    <label for="contatoNomeInput" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="contatoNomeInput" name="nome"
+                        placeholder="Digite seu nome" required>
+                    <div class="invalid-feedback">
+                        Nome inválido
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <label for="contatoEmailInput" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="contatoEmailInput" name="email"
+                        placeholder="Digite seu e-mail" required>
+                    <div class="invalid-feedback">
+                        E-mail inválido
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="isCadastrado" id="contatoCadastroInput">
+                        <label for="contatoCadastroInput" class="form-check-label">Estou cadastrado no
+                            sistema</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="contatoAssuntoInput" class="form-label">Assunto</label>
+                    <select id="contatoAssuntoInput" class="form-select" name="assunto" required>
+                        <option selected disabled value="">Selecione o assunto a ser tratado</option>
+                        <option id="contatoAssuntoServicoWeb" value="trabalhe-conosco-web">Quero contratar serviços Web
+                        </option>
+                        <option id="contatoAssuntoServicoMobile" value="trabalhe-conosco-mobile">Quero contratar
+                            serviços Mobile</option>
+                        <option id="contatoAssuntoServicoUXUI" value="trabalhe-conosco-uxui">Quero contratar serviços de
+                            UX/UI Design</option>
+                        <option id="contatoAssuntoFeedbackPositivo" value="feedback-positivo">Feedback positivo</option>
+                        <option id="contatoAssuntoFeedbackNegativo" value="feedback-negativo">Feedback negativo</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Selecione o assunto a ser tratado
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="contatoMensagemInput" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="contatoMensagemInput" required></textarea>
+                    <div class="invalid-feedback">
+                        Digite sua mensagem
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button id="contatoBtnSubmit" class="btn btn-primary col-auto" type="submit"
+                        form="formContato">Enviar</button>
+                </div>
+            </form>
         </article>
 
         <!-- MODAL FORMULÁRIO DE USUÁRIO -->
