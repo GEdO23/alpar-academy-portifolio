@@ -56,7 +56,7 @@
             "title": "Rede de computadores",
             "content": [
                 "<figure>",
-                "<img src='./assets/imgs/rede.webp' alt='Imagem que representa uma rede de computadores, com um globo em azul ligado por cabos em vários laptops, em aluzão a conexão global da internet.' />",
+                "<img src='./assets/imgs/rede.webp' alt='Imagem que representa uma rede de computadores, com um globo em azul ligado por cabos em vários laptops, em aluzão a conexão global da internet.' loading='lazy'/>",
                 "<figcaption>Rede de Computadores interligadas mundialmente</figcaption>",
                 "</figure>",
                 "<p>Uma rede de computadores é um conjunto de dispositivos interconectados que compartilham informações e recursos. Esses dispositivos podem incluir computadores, servidores, smartphones, tablets, impressoras e outros equipamentos eletrônicos. A conexão entre os dispositivos é feita por meio de meios físicos, como cabos, ou sem fio, como Wi-Fi ou Bluetooth.</p>",
