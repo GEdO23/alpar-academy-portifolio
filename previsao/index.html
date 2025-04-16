@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <img id="weather-icon">
+        <h2 class="temperature"><span></span>º</h2>
+        <p class="feels-like">Sensação térmica de <span></span>º</p>
+        <div class="min-max">
+            <p>Min: <span class="min"></span>º</p>
+            <p>Max: <span class="max"></span>º</p>
+        </div>
+        <p class="humidity">Umidade: <span></span>%</p>
+        <div class="wind">
+            <img class="wind-icon" src="./assets/imgs/arrow.png" alt="Seta apontando para a direção do vento">
+            <p class="wind-speed">Velocidade do vento: <span></span>m/s</p>
+        </div>
+    </div>
+    <section class="input-section">
+        <input id="city-input" type="text" placeholder="Busque uma cidade">
+        <button id="btn-search-city" type="button">Buscar</button>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
