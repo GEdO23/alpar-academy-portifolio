@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background-image: url('../imgs/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2.4rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.8rem;
+    border-radius: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+.card.active {
+    display: flex;
+}
+
+.card h2,
+.card p {
+    color: #FFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 4.8rem;
+}
+
+.card #weather-icon {
+    margin: 0 auto;
+    width: 12.8rem;
+    height: 12.8rem;
+}
+
+.card span {
+    font-weight: 600;
+}
+
+.card .min-max {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.card .feels-like {
+    text-align: center;
+}
+
+.card .humidity {
+    text-align: center;
+}
+
+.card .wind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.card .wind-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0.4rem;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #FFF;
+    transition: transform 0.5s ease;
+}
+
+.input-section {
+    width: 90%;
+    max-width: 30rem;
+    margin-top: 1.6rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.input-section #city-input {
+    flex: 1;
+    padding: 1.6rem;
+    width: 100%;
+    display: block;
+    font-size: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    border-radius: 1.6rem 0 0 1.6rem;
+    color: #FFF;
+}
+
+.input-section #city-input::placeholder {
+    color: #FFF;
+    opacity: 0.8;
+}
+
+.input-section #btn-search-city {
+    width: fit-content;
+    display: block;
+    border: 0;
+    background-color: rgb(242, 108, 59);
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    border-radius: 0 1.6rem 1.6rem 0;
+    color: #FFF;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.input-section #btn-search-city:hover {
+    background-color: rgb(215, 93, 49);
+}
+
+.input-section #btn-search-city:active {
+    background-color: rgb(176, 74, 37);
+}
