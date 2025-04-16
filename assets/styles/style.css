@@ -87,10 +87,6 @@ main h2.title:hover::after {
 
 
 .page-bg {
-    background: url('../imgs/background-paper.png'), var(--c-bg, #FFFFFF);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
     opacity: 0.5;
 
     position: fixed;
