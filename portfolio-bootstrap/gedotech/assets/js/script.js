@@ -311,3 +311,21 @@ class UserService {
 
 const userService = new UserService();
 userService.recarregarTabelaDeUsuarios();
+
+function selectWebServices() {
+    /** @type {HTMLSelectElement?} */
+    const contatoAssuntoInput = document.querySelector('#contatoAssuntoInput')
+    if (contatoAssuntoInput) contatoAssuntoInput.value = 'trabalhe-conosco-web';
+}
+
+function selectMobileServices() {
+    /** @type {HTMLSelectElement?} */
+    const contatoAssuntoInput = document.querySelector('#contatoAssuntoInput')
+    if (contatoAssuntoInput) contatoAssuntoInput.value = 'trabalhe-conosco-mobile';
+}
+
+function selectUXUIServices() {
+    /** @type {HTMLSelectElement?} */
+    const contatoAssuntoInput = document.querySelector('#contatoAssuntoInput')
+    if (contatoAssuntoInput) contatoAssuntoInput.value = 'trabalhe-conosco-uxui';
+}
