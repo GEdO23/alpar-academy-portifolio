@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Login</h1>
+        <h2>Preencha os dados abaixo para entrar na sua conta</h2>
+        <form>
+            <div>
+                <label for="in-email">E-mail</label>
+                <input id="in-email" type="email" required>
+            </div>
+            <div>
+                <label for="in-senha">Senha</label>
+                <input id="in-senha" type="password" required>
+                <span style="color: red;" id="err-senha"></span>
+            </div>
+            <div>
+                <button id="btn-login" type="button">Entrar</button>
+            </div>
+        </form>
+    </main>
+
+    <script type="module" src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
