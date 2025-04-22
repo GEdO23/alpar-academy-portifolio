@@ -119,13 +119,13 @@ class SistemaEscolar {
 
         /** @type {HTMLInputElement?} */
         const senhaInputEl = document.querySelector('input#in-senha');
-        const senhaSpanErr = document.querySelector('#err-senha');
         const senha = senhaInputEl?.value;
 
         if (senha != usuarioEncontrado.senha) {
-            if (senhaSpanErr) senhaSpanErr.innerHTML = "E-mail/senha incorretos";
+            const alert = document.getElementById('login-error-alert');
+            if (alert) alert.classList.remove('d-none');
             throw new Error('E-mail/senha incorretos');
-        }
+        };
 
         const usuario = usuarioEncontrado.exibirPerfil();
         localStorage.setItem('usuario', JSON.stringify(usuario));
@@ -139,5 +139,10 @@ const sistemaEscolar = new SistemaEscolar();
 sistemaEscolar.cadastrar(new Aluno('Gabriel Eringer', 'gabriel.eringer@alpar.com.br', 'abc123', 'ADS'));
 sistemaEscolar.cadastrar(new Professor('Felipe Lima', 'felipe.lima@alpar.com.br', '123abc', ['ADS']));
 
-const btnLoginEl = document.getElementById('btn-login');
-btnLoginEl?.addEventListener('click', () => sistemaEscolar.login());
+const form = document.getElementById('login-form');
+form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    sistemaEscolar.login();
+});
