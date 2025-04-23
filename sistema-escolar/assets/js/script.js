@@ -5,16 +5,20 @@ class Usuario {
     #email;
     /** @type {string} */
     #senha;
+    /** @type {'ALUNO' | 'PROFESSOR'} */
+    #tipo;
 
     /**
      * @param {string} nome
      * @param {string} email
      * @param {string} senha
+     * @param {'ALUNO' | 'PROFESSOR'} tipo
      */
-    constructor(nome, email, senha) {
+    constructor(nome, email, senha, tipo) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.#tipo = tipo;
     }
 
     get nome() { return this.#nome; }
@@ -26,12 +30,14 @@ class Usuario {
     get senha() { return this.#senha; }
     set senha(senha) { this.#senha = senha; }
 
+    get tipo() { return this.#tipo; }
+
     /**
      * Retorna o nome e o e-mail do usuário.
-     * @returns {{nome: string, email: string}}
+     * @returns {{nome: string, email: string, tipo: string}}
      */
     exibirPerfil() {
-        return { nome: this.nome, email: this.email };
+        return { nome: this.nome, email: this.email, tipo: this.tipo };
     }
 }
 
@@ -47,7 +53,7 @@ class Aluno extends Usuario {
      * @param {string} turma
      */
     constructor(nome, email, senha, turma) {
-        super(nome, email, senha);
+        super(nome, email, senha, 'ALUNO');
         this.turma = turma;
     }
 
@@ -56,10 +62,10 @@ class Aluno extends Usuario {
 
     /**
      * Retorna o nome, o e-mail e turma do aluno.
-     * @returns {{nome: string, email: string, turma: string}}
+     * @returns {{nome: string, email: string, tipo: string, turma: string}}
      */
     exibirPerfil() {
-        return { nome: this.nome, email: this.email, turma: this.turma };
+        return { nome: this.nome, email: this.email, tipo: this.tipo, turma: this.turma };
     }
 }
 
@@ -75,7 +81,7 @@ class Professor extends Usuario {
      * @param {string[]} materias
      */
     constructor(nome, email, senha, materias) {
-        super(nome, email, senha);
+        super(nome, email, senha, 'PROFESSOR');
         this.materias = materias;
     }
 
@@ -84,10 +90,10 @@ class Professor extends Usuario {
 
     /**
      * Retorna o nome, o e-mail e matérias do professor.
-     * @returns {{nome: string, email: string, materias: string[]}}
+     * @returns {{nome: string, email: string, tipo: string, materias: string[]}}
      */
     exibirPerfil() {
-        return { nome: this.nome, email: this.email, materias: this.materias };
+        return { nome: this.nome, email: this.email, tipo: this.tipo, materias: this.materias };
     }
 }
 
