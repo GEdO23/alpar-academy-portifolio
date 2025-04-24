@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gabriel Eringer de Oliveira">
+    <meta name="description" content="Simulação de um sistema de automação de luzes de uma casa.">
+    <meta name="keywords" content="simulacao, singleton, gedo, luzes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação de Luzes</title>
+    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        .comodo.active {
+            background-color: #ffc107 !important;
+            color: #000 !important;
+        }
+    </style>
+
+    <main class="container">
+        <h1 class="mt-5 mb-4">Automação de luzes</h1>
+        <section class="border p-4 rounded">
+            <h2>Cômodos da casa</h2>
+            <hr class="mb-4">
+            <div class="row g-5">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 comodo rounded shadow bg-black" id="saladeestar">
+                        <h3 class="comodo-titulo mb-5">Sala de estar</h3>
+                        <button class="btn btn-light" data-comodo="saladeestar" type="button">Toggle</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 comodo rounded shadow bg-black" id="quarto">
+                        <h3 class="comodo-titulo mb-5">Quarto</h3>
+                        <button class="btn btn-light" data-comodo="quarto" type="button">Toggle</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 comodo rounded shadow bg-black" id="escritorio">
+                        <h3 class="comodo-titulo mb-5">Escritório</h3>
+                        <button class="btn btn-light" data-comodo="escritorio" type="button">Toggle</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 comodo rounded shadow bg-black" id="cozinha">
+                        <h3 class="comodo-titulo mb-5">Cozinha</h3>
+                        <button class="btn btn-light" data-comodo="cozinha" type="button">Toggle</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+        <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
