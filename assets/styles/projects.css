@@ -7,20 +7,18 @@ section.section-projects {
 
 section.section-projects nav>ul {
     display: flex;
-    gap: 1rem 0.5rem;
+    gap: 2rem 1rem;
     flex-wrap: wrap;
     list-style-type: none;
 }
 
 .project {
-    width: 7.5rem;
-    height: 3.75rem;
-    aspect-ratio: 2/1;
+    width: 50%;
+    aspect-ratio: 1.8/1;
     border-radius: 8px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     user-select: text;
-    transform: translate(-10%, -10%) scale(80%);
-    transition: transform 500ms ease-in-out;
+    object-fit: cover;
 }
 
 .project:hover {
@@ -39,8 +37,8 @@ section.section-projects nav>ul {
 
     .project {
         width: 20rem;
-        height: 10rem;
-        aspect-ratio: 2/1;
         border-radius: 16px;
+        transform: translate(-10%, -10%) scale(80%);
+        transition: transform 500ms ease-in-out;
     }
 }
