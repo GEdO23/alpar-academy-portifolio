@@ -1,0 +1,124 @@
+{
+    "projects": [
+        {
+            "link": {
+                "href": "./cafeteria/",
+                "title": "Eringer Kaffee"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/cafeteria-cover.png",
+                "alt": "Eringer Kaffee"
+            }
+        },
+        {
+            "link": {
+                "href": "./alpar-table/",
+                "title": "Alpar Table"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/alpar_table-cover.png",
+                "alt": "Alpar Table"
+            }
+        },
+        {
+            "link": {
+                "href": "./alpar/",
+                "title": "Alpar"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/alpar-cover.png",
+                "alt": "Alpar"
+            }
+        },
+        {
+            "link": {
+                "href": "./crosstech-podcast/",
+                "title": "Cross Tech podcast"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/crosstech_podcast-cover.png",
+                "alt": "Cross Tech"
+            }
+        },
+        {
+            "link": {
+                "href": "./blog/",
+                "title": "Blog"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/blog-cover.png",
+                "alt": "Alpar Rocket Blog"
+            }
+        },
+        {
+            "link": {
+                "href": "./card/",
+                "title": "Card"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/card-cover.png",
+                "alt": "Cartão de Perfil"
+            }
+        },
+        {
+            "link": {
+                "href": "./baralho/",
+                "title": "Baralho"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/baralho-cover.png",
+                "alt": "Carta de Baralho"
+            }
+        },
+        {
+            "link": {
+                "href": "./previsao/",
+                "title": "Previsão"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/previsao-cover.png",
+                "alt": "Previsão do Clima"
+            }
+        },
+        {
+            "link": {
+                "href": "./portfolio-bootstrap/",
+                "title": "Portfólio em Bootstrap"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/portfolio_bootstrap-cover.png",
+                "alt": "Portfólio em Bootstrap"
+            }
+        },
+        {
+            "link": {
+                "href": "./portfolio-bootstrap/gedotech/",
+                "title": "Site em Bootstrap"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/gedotech_bootstrap-cover.png",
+                "alt": "gedotech em Bootstrap"
+            }
+        },
+        {
+            "link": {
+                "href": "./sistema-escolar/",
+                "title": "Sistema Escolar"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/sistema_escolar-cover.png",
+                "alt": "Sistema Escolar"
+            }
+        },
+        {
+            "link": {
+                "href": "./automacao-luzes/",
+                "title": "Automação de Luzes"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/automacao_luzes-cover.png",
+                "alt": "Automação de Luzes"
+            }
+        }
+    ]
+}
