@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="GEdO">
+    <meta name="description" content="Sistema de cadastro escolar, criado com AngularJS.">
+    <meta name="keywords" content="angular, angularjs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Sistema Escolar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="" type="image/x-icon" />
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="AppController">
+
+    <main id="main">
+        <article class="greetings">
+            <h1 ng-bind="greetings"></h1>
+        </article>
+        <article class="user">
+            <img ng-if="isProfessor" class="profile-picture"
+                src="https://valentereispessali.com.br/wp-content/uploads/2023/04/Como-funciona-o-periodo-de-intersticio-para-professor-substituto.png"
+                alt="Foto do Professor">
+            <div class="user-dados">
+                <p class="user-data">
+                    <span class="data-label">Nome:</span>
+                    <span class="username" ng-bind="usuario.nome"></span>
+                </p>
+                <p class="user-data">
+                    <span class="data-label">Tipo:</span>
+                    <span class="user-tipo" ng-bind="usuario.tipo"></span>
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
