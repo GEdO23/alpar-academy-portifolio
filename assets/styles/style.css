@@ -1,30 +1,6 @@
-@font-face {
-    font-family: 'Source Serif';
-    src: url('../fonts/Source_Serif_4/SourceSerif4-VariableFont.ttf');
-}
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
-}
-
-@font-face {
-    font-family: 'Anonymous Pro';
-    src: url('../fonts/Anonymous_Pro/AnonymousPro-Regular.ttf');
-    font-weight: 400;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
     font-size: 62.5%;
-    --ff-primary: 'Source Serif', 'Times New Roman', Times, serif;
-    --ff-secondary: 'Josefin Sans', Arial, Helvetica, sans-serif;
-    --ff-tertiary: 'Anonymous Pro', monospace;
+    --ff-primary: 'Josefin Sans', Arial, Helvetica, sans-serif;
 
     --c-primary: rgb(0, 0, 0);
     --c-secondary: rgb(71, 91, 98);
@@ -33,11 +9,18 @@
     --c-bg-o20: rgba(255, 255, 255, 0.2);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     position: relative;
     min-height: 100vh;
     color: var(--c-primary, #000);
-    font-family: var(--ff-primary, sans-serif);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e6e6;
 }
 
 p {
@@ -58,17 +41,11 @@ ul {
     list-style-type: none;
 }
 
-::selection {
-    background: var(--c-primary, #000);
-    color: var(--c-bg, #fff);
-}
-
 .title {
     font-size: 2.4rem;
     font-weight: 400;
     line-height: 120%;
-    font-family: var(--ff-secondary, sans-serif);
-    position: relative;
+    font-family: var(--ff-primary, sans-serif);
 }
 
 .subtitle {
@@ -76,7 +53,7 @@ ul {
     font-weight: 400;
     line-height: 120%;
     color: var(--c-secondary, #475B62);
-    font-family: var(--ff-tertiary, monospace);
+    font-family: var(--ff-primary, sans-serif);
 }
 
 .section {
@@ -86,35 +63,21 @@ ul {
     gap: 1.6rem;
 }
 
-/* .page-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0.5;
-} */
-
-
-/* INTRODUCTION */
 
 .introduction {
-    width: 100%;
     padding: 1.6rem;
     display: flex;
     gap: 1.6rem;
 }
 
 .introduction .text-container {
-    width: 100%;
     max-width: 61rem;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
 }
 
-.introduction .photo {
+.introduction img {
     width: 8.8rem;
     height: 8.8rem;
     aspect-ratio: 1/1;
@@ -123,16 +86,12 @@ ul {
 }
 
 
-/* ABOUT ME */
-
 .section-about-me .text-container {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
 }
 
-
-/* PROJECTS */
 
 #project-list {
     display: flex;
@@ -151,13 +110,9 @@ ul {
 }
 
 
-/* FOOTER */
-
 #footer {
-    width: 100%;
     padding: 1.6rem;
-    background: var(--c-bg-o20, rgba(255, 255, 255, 0.2));
-    box-shadow: 0px -8px 8px 0px rgba(0, 0, 0, 0.10);
+    background-color: var(--c-bg-o20, rgba(255, 255, 255, 0.2));
 }
 
 #footer .title {
@@ -175,7 +130,14 @@ ul {
     font-size: 1rem;
     font-weight: 600;
     line-height: 150%;
-    color: var(--c-brand);
+    color: var(--c-brand, #000);
+    font-family: var(--ff-primary, sans-serif);
+}
+
+
+::selection {
+    background-color: var(--c-primary, #000);
+    color: var(--c-bg, #fff);
 }
 
 
@@ -203,10 +165,9 @@ ul {
         font-size: 2.4rem;
     }
 
-    .introduction .photo {
+    .introduction img {
         width: 24rem;
         height: 24rem;
-        aspect-ratio: 1/1;
     }
 
     .section .title::after {
@@ -216,7 +177,7 @@ ul {
         left: 0;
         width: 0;
         height: 0.2rem;
-        background: var(--c-primary, #000);
+        background-color: var(--c-primary, #000);
         transition: all 1s ease-in-out;
     }
 
@@ -254,7 +215,7 @@ ul {
         height: 13.5rem;
         border-radius: 0.8rem;
         transform: translate(-5%, -5%) scale(90%);
-        transition: transform 500ms ease-in-out;
+        transition: transform 0.5s;
     }
 
     #project-list li img:hover {
