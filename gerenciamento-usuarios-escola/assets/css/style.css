@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --blackboard-light-color: #307D72;
+    --blackboard-dark-color: #1E564D;
+}
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    height: 100dvh;
+    overflow-x: hidden;
+}
+
+.greetings {
+    width: 100%;
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('https://st4.depositphotos.com/36748022/41344/i/450/depositphotos_413441384-stock-photo-texture-chalk-rubbed-out-blackboard.jpg');
+    background-size: cover;
+    padding: 1.6rem;
+}
+
+.greetings h1 {
+    font-size: 4.8rem;
+    color: #fff;
+    font-weight: 200;
+    min-width: 250px;
+}
+
+.user {
+    display: flex;
+    gap: 3.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 6.4rem;
+    padding: 1.6rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1.6rem;
+}
+
+.user .profile-picture {
+    width: 32rem;
+    height: 32rem;
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.8);
+    transition: 0.5s;
+    user-select: none;
+}
+
+.user .profile-picture:hover {
+    filter: brightness(1);
+}
+
+.user .user-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    flex: 1;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.user .data-label {
+    opacity: 0.8;
+    font-size: 2.4rem;
+}
+
+.user .username {
+    font-size: 3.2rem;
+    flex: 1;
+}
+
+.user .user-tipo {
+    font-size: 3.2rem;
+    flex: 1;
+}
+
+::selection {
+    background-color: var(--blackboard-dark-color);
+    color: #fff;
+}
