@@ -62,7 +62,6 @@ class ProjectList {
             projCoverEl.src = proj.cover.src;
             projCoverEl.alt = proj.cover.alt;
             projCoverEl.loading = 'lazy';
-            projCoverEl.classList.add('project');
 
             projAnchorEl.appendChild(projCoverEl);
             newItemEl.appendChild(projAnchorEl)
