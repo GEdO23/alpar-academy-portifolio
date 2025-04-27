@@ -23,7 +23,7 @@ class ProjectList {
     }
 
     async fetchData() {
-        const jsonFileLocation = '../assets/db/projects.json';
+        const jsonFileLocation = './assets/db/projects.json';
 
         await fetch(jsonFileLocation)
             .then(response => response.json())
