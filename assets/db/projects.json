@@ -6,7 +6,7 @@
                 "title": "Cafeteria"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/cafeteria-cover.png",
+                "src": "./assets/imgs/project-covers/cafeteria-cover.webp",
                 "alt": "Eringer Kaffee"
             }
         },
@@ -16,7 +16,7 @@
                 "title": "Site de empresa em tabela"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/alpar_table-cover.png",
+                "src": "./assets/imgs/project-covers/alpar_table-cover.webp",
                 "alt": "Alpar Table"
             }
         },
@@ -26,7 +26,7 @@
                 "title": "Site de empresa"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/alpar-cover.png",
+                "src": "./assets/imgs/project-covers/alpar-cover.webp",
                 "alt": "Alpar"
             }
         },
@@ -36,7 +36,7 @@
                 "title": "Podcast"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/podcast-cover.png",
+                "src": "./assets/imgs/project-covers/podcast-cover.webp",
                 "alt": "Cross Tech"
             }
         },
@@ -46,7 +46,7 @@
                 "title": "Blog"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/blog-cover.png",
+                "src": "./assets/imgs/project-covers/blog-cover.webp",
                 "alt": "Alpar Rocket Blog"
             }
         },
@@ -56,7 +56,7 @@
                 "title": "Card"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/card-cover.png",
+                "src": "./assets/imgs/project-covers/card-cover.webp",
                 "alt": "Cartão de Perfil"
             }
         },
@@ -66,7 +66,7 @@
                 "title": "Baralho"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/baralho-cover.png",
+                "src": "./assets/imgs/project-covers/baralho-cover.webp",
                 "alt": "Carta de Baralho"
             }
         },
@@ -76,7 +76,7 @@
                 "title": "Previsão"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/previsao-cover.png",
+                "src": "./assets/imgs/project-covers/previsao-cover.webp",
                 "alt": "Previsão do Clima"
             }
         },
@@ -86,7 +86,7 @@
                 "title": "Portfólio em Bootstrap"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/portfolio_bootstrap-cover.png",
+                "src": "./assets/imgs/project-covers/portfolio_bootstrap-cover.webp",
                 "alt": "Portfólio em Bootstrap"
             }
         },
@@ -96,7 +96,7 @@
                 "title": "Site em Bootstrap"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/gedotech_bootstrap-cover.png",
+                "src": "./assets/imgs/project-covers/gedotech_bootstrap-cover.webp",
                 "alt": "gedotech em Bootstrap"
             }
         },
@@ -106,7 +106,7 @@
                 "title": "Sistema Escolar"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/sistema_escolar-cover.png",
+                "src": "./assets/imgs/project-covers/sistema_escolar-cover.webp",
                 "alt": "Sistema Escolar"
             }
         },
@@ -116,7 +116,7 @@
                 "title": "Automação de Luzes"
             },
             "cover": {
-                "src": "./assets/imgs/project-covers/automacao_luzes-cover.png",
+                "src": "./assets/imgs/project-covers/automacao_luzes-cover.webp",
                 "alt": "Automação de Luzes"
             }
         }
