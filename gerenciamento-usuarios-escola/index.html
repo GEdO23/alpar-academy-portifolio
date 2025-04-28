@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <link rel="icon" href="" type="image/x-icon" />
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
 
@@ -28,21 +31,44 @@
         <article class="greetings">
             <h1 ng-bind="greetings"></h1>
         </article>
-        <article class="user">
-            <img ng-if="isProfessor" class="profile-picture"
-                src="https://valentereispessali.com.br/wp-content/uploads/2023/04/Como-funciona-o-periodo-de-intersticio-para-professor-substituto.png"
-                alt="Foto do Professor">
-            <div class="user-dados">
-                <p class="user-data">
-                    <span class="data-label">Nome:</span>
-                    <span class="username" ng-bind="usuario.nome"></span>
-                </p>
-                <p class="user-data">
-                    <span class="data-label">Tipo:</span>
-                    <span class="user-tipo" ng-bind="usuario.tipo"></span>
-                </p>
-            </div>
-        </article>
+        <div ng-controller="ListaDeAlunosController" class="listaAlunosController">
+            <form class="filters">
+                <div class="search-box">
+                    <select ng-model="filtroTipo">
+                        <option selected value="">Todos</option>
+                        <option value="Professor">Professor</option>
+                        <option value="Aluno">Aluno</option>
+                    </select>
+
+                    <input type="search" id="search-dropdown" placeholder="Pesquisar usuário..." ng-model="filtro" />
+                </div>
+            </form>
+
+            <table class="tabelaUsuarios">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Data de cadastro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        ng-repeat="usuario in usuarios | orderBy: '-dataCadastro' | orderBy: '-tipo' | filter: filtro | filter: {tipo: filtroTipo}">
+                        <td ng-bind="usuario.nome | uppercase"></td>
+                        <td ng-bind="usuario.tipo"></td>
+                        <td ng-bind="usuario.dataCadastro | date: 'dd/MM/yyyy'"></td>
+                    </tr>
+                </tbody>
+                <tfoot class="listaAlunosFooter">
+                    <tr>
+                        <td>Quantidade de alunos:
+                            <span>{{ (usuarios | filter: {tipo: 'Aluno'}).length }}</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </main>
 
     <script src="./assets/js/script.js"></script>

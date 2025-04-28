@@ -17,6 +17,68 @@ body {
     overflow-x: hidden;
 }
 
+.listaAlunosController {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 3.2rem;
+}
+
+.tabelaUsuarios {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabelaUsuarios>thead>tr>th,
+.tabelaUsuarios>tbody>tr>td {
+    border: 1px solid #000;
+    padding: 0.8rem;
+}
+
+.tabelaUsuarios>tfoot>tr>td {
+    padding-top: 1.6rem;
+}
+
+.tabelaUsuarios>thead>tr>th {
+    text-align: start;
+    background-color: #1E564D;
+    color: #fff;
+    font-weight: 400;
+}
+
+.filters {
+    margin-bottom: 3.2rem;
+    border-radius: 0.8rem;
+    border: 1px solid #000;
+    padding: 0.4rem;
+    z-index: 3;
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.search-box select {
+    background-color: var(--blackboard-light-color);
+    padding: 1rem;
+    display: flex;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
 .greetings {
     width: 100%;
     min-height: 20rem;
@@ -34,64 +96,6 @@ body {
     color: #fff;
     font-weight: 200;
     min-width: 250px;
-}
-
-.user {
-    display: flex;
-    gap: 3.2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 6.4rem;
-    padding: 1.6rem;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 1.6rem;
-}
-
-.user .profile-picture {
-    width: 32rem;
-    height: 32rem;
-    aspect-ratio: 1/1;
-    border-radius: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    filter: brightness(0.8);
-    transition: 0.5s;
-    user-select: none;
-}
-
-.user .profile-picture:hover {
-    filter: brightness(1);
-}
-
-.user .user-dados {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    flex: 1;
-}
-
-.user-data {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.user .data-label {
-    opacity: 0.8;
-    font-size: 2.4rem;
-}
-
-.user .username {
-    font-size: 3.2rem;
-    flex: 1;
-}
-
-.user .user-tipo {
-    font-size: 3.2rem;
-    flex: 1;
 }
 
 ::selection {
