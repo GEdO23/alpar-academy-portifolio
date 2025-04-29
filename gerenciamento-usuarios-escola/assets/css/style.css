@@ -41,7 +41,7 @@ body {
 
 .tabelaUsuarios>thead>tr>th {
     text-align: start;
-    background-color: #1E564D;
+    background-color: var(--blackboard-light-color);
     color: #fff;
     font-weight: 400;
 }
@@ -49,7 +49,7 @@ body {
 .filters {
     margin-bottom: 3.2rem;
     border-radius: 0.8rem;
-    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     padding: 0.4rem;
     z-index: 3;
 }
@@ -69,12 +69,26 @@ body {
 }
 
 .search-box select {
-    background-color: var(--blackboard-light-color);
+    background-color: var(--blackboard-dark-color);
     padding: 1rem;
     display: flex;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     border: none;
     outline: none;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.btn {
+    background-color: var(--blackboard-dark-color);
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
     font-size: 1.4rem;
     color: #fff;
 }
@@ -101,4 +115,21 @@ body {
 ::selection {
     background-color: var(--blackboard-dark-color);
     color: #fff;
+}
+
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-timing-function: ease-in;
+    animation-duration: 0.2s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

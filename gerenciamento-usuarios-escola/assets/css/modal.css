@@ -1,0 +1,87 @@
+.modal-container {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s fade-in;
+}
+
+.modal {
+    padding: 1.6rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10%;
+    max-height: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1.6rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    z-index: 2;
+}
+
+.modal h2 {
+    padding-right: 4.8rem;
+}
+
+.modal .close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    opacity: 0.5;
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    background-color: #000;
+    opacity: 1;
+}
+
+.giant-close-button {
+    position: absolute;
+    inset: 0;
+    border: none;
+    background: none;
+    cursor: default;
+    z-index: 1;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modal label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    padding: 0.8rem;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+}
+
+.modal .send {
+    height: 4rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
+}
