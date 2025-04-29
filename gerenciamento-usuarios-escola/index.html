@@ -9,6 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AngularJS Sistema Escolar</title>
 
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/modal.css" rel="stylesheet" type="text/css" />
+
+    <link rel="icon" href="" type="image/x-icon" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,90 +23,96 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <link rel="icon" href="" type="image/x-icon" />
-    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/modal.css" rel="stylesheet" type="text/css" />
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
 <body ng-controller="AppController">
 
-    <main id="main">
-        <article class="greetings">
-            <h1 ng-bind="greetings"></h1>
-        </article>
-        <div ng-controller="ListaDeAlunosController" class="listaAlunosController">
-            <aside ng-if="isModalActive" class="modal-container fade-in">
-                <button class="giant-close-button" ng-click="toggleModal()"></button>
-                <div class="modal">
-                    <button class="close" type="button" ng-click="toggleModal()">
-                        <span class="material-symbols-outlined">close</span>
-                    </button>
-                    <h2>Cadastro</h2>
-                    <form>
-                        <label>
-                            <p>Nome</p>
-                            <input type="text" placeholder="Nome completo" ng-model="usuarioInput.nome">
-                        </label>
-                        <label>
-                            <p>Tipo</p>
-                            <select ng-model="usuarioInput.tipo">
-                                <option value="Aluno" selected>Aluno</option>
-                                <option value="Professor">Professor</option>
-                            </select>
-                        </label>
-                        <button class="btn send" type="submit" ng-click="adicionarUsuario()">Adicionar</button>
-                    </form>
-                </div>
-            </aside>
+    <header id="header">
+        <div class="user-card">
+            <img ng-if="isProfessor" class="user-photo" src="../assets/imgs/photo.webp" alt="Foto de perfil">
+            <div class="user-info">
+                <p ng-bind="usuario.nome" class="user-name">User name</p>
+                <p ng-bind="usuario.tipo" class="user-type">User type</p>
+            </div>
+        </div>
+    </header>
 
-            <form class="filters">
-                <div class="search-box">
-                    <select ng-model="filtroTipo">
-                        <option selected value="">Todos</option>
-                        <option value="Aluno">Aluno</option>
+    <main id="main">
+        <div ng-if="isGreetingsVisible" class="welcome-message container fade-in">
+            {{ greetings }}
+            <span class="material-symbols-outlined icon" ng-click="closeGreetings()">close</span>
+        </div>
+        <article class="users container" ng-controller="ListaDeAlunosController">
+            <h2 class="title">Usuários</h2>
+            <div class="search-box">
+                <span class="material-symbols-outlined icon">search</span>
+                <input ng-model="filtro" type="search" placeholder="Pesquisar...">
+            </div>
+            <div class="filters">
+                <select ng-model="filtroTipo" class="filter-user-type-list">
+                    <option value="">Tipo</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Aluno">Aluno</option>
+                </select>
+            </div>
+            <div class="outline">
+                <div class="user-list">
+                    <div ng-repeat="usuario in usuarios | filter: {nome: filtro} | filter: {tipo: filtroTipo }"
+                        class="item">
+                        <div class="leading-info">
+                            <p class="user-name" ng-bind="usuario.nome | uppercase">User name</p>
+                            <p class="user-type" ng-bind="usuario.tipo">User type</p>
+                        </div>
+                        <div class="trailing-info">
+                            <p class="user-data" ng-bind="usuario.dataCadastro | date: 'dd/MM/yyyy'">dd/MM/yyyy</p>
+                            <span ng-click="removerUsuario(usuario)"
+                                class="material-symbols-outlined icon icon-btn danger">delete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-list-footer">
+                <div>
+                    <button ng-click="toggleModal()" type="button" class="btn">Adicionar</button>
+                </div>
+                <div class="users-total">
+                    <p>
+                        Total de Professores:
+                        <span>{{ (usuarios | filter: {tipo: 'Professor' }).length }}</span>
+                    </p>
+                    <p>
+                        Total de Alunos:
+                        <span>{{ (usuarios | filter: {tipo: 'Aluno' }).length }}</span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <aside ng-if="isModalActive" class="modal-container fade-in">
+        <button class="giant-close-button" ng-click="toggleModal()"></button>
+        <div class="modal">
+            <button class="close" type="button" ng-click="toggleModal()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <h2>Cadastro</h2>
+            <form>
+                <label>
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome completo" ng-model="usuarioInput.nome">
+                </label>
+                <label>
+                    <p>Tipo</p>
+                    <select ng-model="usuarioInput.tipo">
+                        <option value="Aluno" selected>Aluno</option>
                         <option value="Professor">Professor</option>
                     </select>
-
-                    <input type="search" id="search-dropdown" placeholder="Pesquisar usuário..." ng-model="filtro" />
-                </div>
+                </label>
+                <button ng-click="adicionarUsuario()" class="btn send" type="submit">Adicionar</button>
             </form>
-
-            <table class="tabelaUsuarios">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Tipo</th>
-                        <th>Data de cadastro</th>
-                        <th>Remover</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr
-                        ng-repeat="usuario in usuarios | orderBy: '-dataCadastro' | orderBy: '-tipo' | filter: filtro | filter: {tipo: filtroTipo}">
-                        <td ng-bind="usuario.nome | uppercase"></td>
-                        <td ng-bind="usuario.tipo"></td>
-                        <td ng-bind="usuario.dataCadastro | date: 'dd/MM/yyyy'"></td>
-                        <td ng-click="removerUsuario(usuario)" style="cursor: pointer;"><span
-                                class="material-symbols-outlined">delete</span>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot class="listaAlunosFooter">
-                    <tr>
-                        <td>
-                            <button type="button" ng-click="toggleModal()" class="btn">Adicionar</button>
-                        </td>
-                        <td>Quantidade de alunos:
-                            <span>{{ (usuarios | filter: {tipo: 'Aluno'}).length }}</span>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
         </div>
-    </main>
+    </aside>
 
     <script>
         window.app = angular.module('app', []);
