@@ -20,6 +20,7 @@
 
     <link rel="icon" href="" type="image/x-icon" />
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/modal.css" rel="stylesheet" type="text/css" />
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
@@ -32,32 +33,40 @@
             <h1 ng-bind="greetings"></h1>
         </article>
         <div ng-controller="ListaDeAlunosController" class="listaAlunosController">
+            <aside ng-if="isModalActive" class="modal-container fade-in">
+                <button class="giant-close-button" ng-click="toggleModal()"></button>
+                <div class="modal">
+                    <button class="close" type="button" ng-click="toggleModal()">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <h2>Cadastro</h2>
+                    <form>
+                        <label>
+                            <p>Nome</p>
+                            <input type="text" placeholder="Nome completo" ng-model="usuarioInput.nome">
+                        </label>
+                        <label>
+                            <p>Tipo</p>
+                            <select ng-model="usuarioInput.tipo">
+                                <option value="Aluno" selected>Aluno</option>
+                                <option value="Professor">Professor</option>
+                            </select>
+                        </label>
+                        <button class="btn send" type="submit" ng-click="adicionarUsuario()">Adicionar</button>
+                    </form>
+                </div>
+            </aside>
+
             <form class="filters">
                 <div class="search-box">
                     <select ng-model="filtroTipo">
                         <option selected value="">Todos</option>
-                        <option value="Professor">Professor</option>
                         <option value="Aluno">Aluno</option>
+                        <option value="Professor">Professor</option>
                     </select>
 
                     <input type="search" id="search-dropdown" placeholder="Pesquisar usuário..." ng-model="filtro" />
                 </div>
-            </form>
-
-            <form class="formUsuario">
-                <label>
-                    Nome:
-                    <input type="text" placeholder="Nome completo do usuário" ng-model="novoUsuarioNome" required>
-                </label>
-                <label>
-                    Tipo:
-                    <select ng-model="novoUsuarioTipo" required>
-                        <option value="Professor">Professor</option>
-                        <option value="Aluno">Aluno</option>
-                    </select>
-                </label>
-
-                <button ng-click="adicionarUsuario()">Cadastrar novo usuário</button>
             </form>
 
             <table class="tabelaUsuarios">
@@ -82,6 +91,9 @@
                 </tbody>
                 <tfoot class="listaAlunosFooter">
                     <tr>
+                        <td>
+                            <button type="button" ng-click="toggleModal()" class="btn">Adicionar</button>
+                        </td>
                         <td>Quantidade de alunos:
                             <span>{{ (usuarios | filter: {tipo: 'Aluno'}).length }}</span>
                         </td>
