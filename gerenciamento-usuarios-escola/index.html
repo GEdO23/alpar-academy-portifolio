@@ -44,12 +44,29 @@
                 </div>
             </form>
 
+            <form class="formUsuario">
+                <label>
+                    Nome:
+                    <input type="text" placeholder="Nome completo do usuário" ng-model="novoUsuarioNome" required>
+                </label>
+                <label>
+                    Tipo:
+                    <select ng-model="novoUsuarioTipo" required>
+                        <option value="Professor">Professor</option>
+                        <option value="Aluno">Aluno</option>
+                    </select>
+                </label>
+
+                <button ng-click="adicionarUsuario()">Cadastrar novo usuário</button>
+            </form>
+
             <table class="tabelaUsuarios">
                 <thead>
                     <tr>
                         <th>Nome</th>
                         <th>Tipo</th>
                         <th>Data de cadastro</th>
+                        <th>Remover</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,6 +75,9 @@
                         <td ng-bind="usuario.nome | uppercase"></td>
                         <td ng-bind="usuario.tipo"></td>
                         <td ng-bind="usuario.dataCadastro | date: 'dd/MM/yyyy'"></td>
+                        <td ng-click="removerUsuario(usuario)" style="cursor: pointer;"><span
+                                class="material-symbols-outlined">delete</span>
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot class="listaAlunosFooter">
@@ -71,7 +91,12 @@
         </div>
     </main>
 
-    <script src="./assets/js/script.js"></script>
+    <script>
+        window.app = angular.module('app', []);
+    </script>
+    <script src="./assets/js/aluno.service.js"></script>
+    <script src="./assets/js/app.controller.js"></script>
+    <script src="./assets/js/alunos.controller.js"></script>
 </body>
 
 </html>
