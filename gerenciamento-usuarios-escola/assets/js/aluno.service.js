@@ -34,6 +34,9 @@ window.app.service('UsuarioService', function () {
         }
     ];
 
+    function delay(ms) {
+    }
+
     return {
         listar() {
             return usuarios;
@@ -43,6 +46,12 @@ window.app.service('UsuarioService', function () {
         },
         remover(index) {
             usuarios.splice(index, 1);
+        },
+        salvar(usuario) {
+            return new Promise((resolve, reject) => {
+                setTimeout(resolve, 2500);
+                this.adicionar(usuario);
+            });
         }
     }
 })
