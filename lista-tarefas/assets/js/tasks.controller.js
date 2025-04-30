@@ -64,4 +64,18 @@ window.app.controller('TaskController', function ($scope, $filter, TaskService) 
         TaskService.removeTask(currentTask.id);
         $scope.tasks = TaskService.getTasks();
     }
+
+    $scope.validate = (error, touched) => {
+        if (!touched) {
+            return {};
+        }
+        const values = Object.values(error);
+        if (values.length == 0) {
+            return {};
+        }
+        const isTrue = values.reduce((acc, cur) => acc && cur, true)
+        if (isTrue) {
+            return { 'border-color': 'red' };
+        }
+    }
 })
