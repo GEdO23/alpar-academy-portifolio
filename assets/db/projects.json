@@ -119,6 +119,16 @@
                 "src": "./assets/imgs/project-covers/automacao_luzes-cover.webp",
                 "alt": "Automação de Luzes"
             }
+        },
+        {
+            "link": {
+                "href": "./gerenciamento-usuarios-escola/",
+                "title": "Gerenciamento de Usuários de uma Escola"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/gerenciamento_usuarios_escola-cover.webp",
+                "alt": "Gerenciamento de Usuarios de uma Escola em AngularJS"
+            }
         }
     ]
 }
