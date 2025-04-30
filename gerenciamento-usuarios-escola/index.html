@@ -39,7 +39,7 @@
     </header>
 
     <main id="main">
-        <div ng-if="isGreetingsVisible" class="welcome-message container fade-in">
+        <div ng-if="isGreetingsVisible" class="message welcome-message container fade-in">
             {{ greetings }}
             <span class="material-symbols-outlined icon" ng-click="closeGreetings()">close</span>
         </div>
@@ -55,6 +55,10 @@
                     <option value="Professor">Professor</option>
                     <option value="Aluno">Aluno</option>
                 </select>
+            </div>
+            <div ng-if="isSuccessMessageVisible" class="message success-message fade-in">
+                {{ success }}
+                <span class="material-symbols-outlined icon" ng-click="hideSuccessMessage()">close</span>
             </div>
             <div class="outline">
                 <div class="user-list">
@@ -73,43 +77,41 @@
                 </div>
             </div>
             <div class="user-list-footer">
-                <div>
-                    <button ng-click="toggleModal()" type="button" class="btn">Adicionar</button>
-                </div>
-                <div class="users-total">
-                    <p>
-                        Total de Professores:
-                        <span>{{ (usuarios | filter: {tipo: 'Professor' }).length }}</span>
-                    </p>
-                    <p>
-                        Total de Alunos:
-                        <span>{{ (usuarios | filter: {tipo: 'Aluno' }).length }}</span>
-                    </p>
+                <div style="width: 100%; display: flex; justify-content: space-between;">
+                    <button ng-click="activateModal()" type="button" class="btn">Adicionar</button>
+                    <div class="users-total">
+                        <p>
+                            Total de Professores:
+                            <span>{{ (usuarios | filter: {tipo: 'Professor' }).length }}</span>
+                        </p>
+                        <p>
+                            Total de Alunos:
+                            <span>{{ (usuarios | filter: {tipo: 'Aluno' }).length }}</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </article>
     </main>
 
-    <aside ng-if="isModalActive" class="modal-container fade-in">
-        <button class="giant-close-button" ng-click="toggleModal()"></button>
+    <aside ng-if="isModalActive" class="modal-container">
+        <button class="giant-close-button" ng-click="deactivateModal()"></button>
         <div class="modal">
-            <button class="close" type="button" ng-click="toggleModal()">
+            <button class="close" type="button" ng-click="deactivateModal()">
                 <span class="material-symbols-outlined">close</span>
             </button>
             <h2>Cadastro</h2>
-            <form name="form" ng-submit="adicionarUsuario()">
+            <form name="form" ng-submit="adicionarUsuario(form)">
                 <label>
                     <p>Nome</p>
                     <input type="text" name="nome" ng-model="usuarioInput.nome" ng-required="true">
-                    <span ng-if="form.nome.$touched && form.nome.$invalid">The name is
-                        required.</span>
+                    <span ng-if="form.nome.$touched && form.nome.$invalid">O nome é obrigatório.</span>
                 </label>
                 <label>
                     <p>E-mail</p>
                     <input type="email" name="email" ng-model="usuarioInput.email" ng-required="true"
                         ng-regex="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g">
-                    <span ng-if="form.email.$touched && form.email.$invalid">The email is
-                        required.</span>
+                    <span ng-if="form.email.$touched && form.email.$invalid">Formato de e-mail inválido.</span>
                 </label>
                 </label>
                 <label>
@@ -118,10 +120,15 @@
                         <option value="Aluno" selected>Aluno</option>
                         <option value="Professor">Professor</option>
                     </select>
-                    <span ng-if="form.tipo.$touched && form.tipo.$invalid">The type is
-                        required.</span>
+                    <span ng-if="form.tipo.$touched && form.tipo.$invalid">O tipo de usuário é obrigatório</span>
                 </label>
-                <button class="btn send" type="submit" ng-disabled="!form.$valid">Adicionar</button>
+                <button class="btn send" type="submit" ng-disabled="!form.$valid || isLoading">
+                    <span style="display: flex; align-items: center; justify-content: center; gap: 0.8rem;">
+                        <img ng-if="isLoading" src="./assets/imgs/Loading_icon.webp" role="img"
+                            style="width: 1.6rem; height: 1.6rem;">
+                        {{ !isLoading ? 'Adicionar' : 'Carregando...' }}
+                    </span>
+                </button>
             </form>
         </div>
     </aside>
@@ -130,6 +137,7 @@
         window.app = angular.module('app', []);
     </script>
     <script src="./assets/js/aluno.service.js"></script>
+    <script src="./assets/js/modal.controller.js"></script>
     <script src="./assets/js/app.controller.js"></script>
     <script src="./assets/js/alunos.controller.js"></script>
 </body>
