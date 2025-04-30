@@ -34,6 +34,13 @@ body {
     color: #B41A1A;
 }
 
+input.ng-dirty.ng-invalid,
+select.ng-touched.ng-invalid {
+    border: 2px solid #B41A1A;
+    background-color: #b41a1a3d;
+    color: #fff;
+}
+
 .container {
     max-width: 120rem;
     margin-inline-start: auto;
@@ -55,6 +62,11 @@ body {
     border-radius: 0.8rem;
     font-size: 1.6rem;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:disabled {
+    opacity: 0.5;
 }
 
 .icon {
