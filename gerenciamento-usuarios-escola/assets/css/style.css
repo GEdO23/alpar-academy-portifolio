@@ -6,21 +6,18 @@
 
 :root {
     font-size: 62.5%;
-    --c-light: rgba(255, 255, 255, 1);
-    --c-light-o8: rgba(255, 255, 255, 0.8);
-    --c-light-o6: rgba(255, 255, 255, 0.6);
-    --c-light-o4: rgba(255, 255, 255, 0.4);
-    --c-light-o2: rgba(255, 255, 255, 0.2);
-    --c-dark: rgba(45, 18, 2, 1);
-    --c-dark-o8: rgba(45, 18, 2, 0.8);
-    --c-dark-o6: rgba(45, 18, 2, 0.6);
-    --c-dark-o4: rgba(45, 18, 2, 0.4);
-    --c-dark-o2: rgba(45, 18, 2, 0.2);
-    --c-brand: rgba(227, 100, 21, 1);
-    --c-brand-o8: rgba(227, 100, 21, 0.8);
-    --c-brand-o6: rgba(227, 100, 21, 0.6);
-    --c-brand-o4: rgba(227, 100, 21, 0.4);
-    --c-brand-o2: rgba(227, 100, 21, 0.2);
+    --c-light: #fff;
+    --c-dark: #000;
+    --c-dark-o6: rgba(0, 0, 0, 0.6);
+    --c-brand-dark: #2d1202;
+    --c-brand-dark-o8: rgba(45, 18, 2, 0.8);
+    --c-brand-dark-o6: rgba(45, 18, 2, 0.6);
+    --c-brand: #ff9554;
+    --c-brand-o2: rgba(255, 149, 84, 0.2);
+    --c-danger: #B41A1A;
+    --c-danger-o2: rgba(180, 26, 26, 0.2);
+    --c-success-light: #bdffd3;
+    --c-success-dark: #01220c;
 }
 
 body {
@@ -31,14 +28,48 @@ body {
 }
 
 .danger {
-    color: #B41A1A;
+    color: var(--c-danger);
 }
 
 input.ng-dirty.ng-invalid,
 select.ng-touched.ng-invalid {
-    border: 2px solid #B41A1A;
-    background-color: #b41a1a3d;
-    color: #fff;
+    border: 2px solid var(--c-danger);
+    background-color: var(--c-danger-o2);
+    color: var(--c-light);
+}
+
+.message {
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.8rem;
+}
+
+.message .icon {
+    cursor: pointer;
+}
+
+.welcome-message {
+    background-color: var(--c-brand-o2);
+    margin-bottom: 3.2rem;
+    color: var(--c-brand-dark);
+}
+
+.success-message {
+    background-color: var(--c-success-light);
+    margin-top: 1.6rem;
+    color: var(--c-success-dark);
+}
+
+.welcome-message .icon {
+    color: var(--c-brand-dark);
+}
+
+.success-message .icon {
+    color: var(--c-success-dark);
 }
 
 .container {
@@ -57,10 +88,11 @@ select.ng-touched.ng-invalid {
     padding: 0.8rem 1.6rem;
     border: none;
     outline: none;
-    color: var(--c-light);
+    color: var(--c-brand-dark);
     background-color: var(--c-brand);
     border-radius: 0.8rem;
     font-size: 1.6rem;
+    font-weight: 600;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -102,72 +134,40 @@ select.ng-touched.ng-invalid {
 
 #header .user-name {
     font-size: 2.4rem;
-    color: var(--c-dark);
+    color: var(--c-brand-dark);
 }
 
 #header .user-type {
     font-size: 1.6rem;
-    color: var(--c-dark-o8);
+    color: var(--c-brand-dark-o8);
+    font-weight: 600;
 }
 
 #main {
     padding: 0 3.2rem;
 }
 
-.message {
-    padding: 1.6rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0.8rem;
-}
-
-.welcome-message {
-    background-color: var(--c-brand-o2);
-    margin-bottom: 3.2rem;
-    color: var(--c-dark);
-}
-
-.success-message {
-    background-color: #bdffd3;
-    margin-top: 1.6rem;
-    color: #01220c;
-}
-
-.message .icon {
-    cursor: pointer;
-}
-
-.welcome-message .icon {
-    color: var(--c-dark);
-}
-
-.success-message .icon {
-    color: #01220c;
-}
-
 .search-box {
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--c-dark-o6);
     border-radius: 6.4rem;
     display: flex;
     gap: 0.8rem;
     align-items: center;
     position: relative;
     padding: 1.6rem;
+    margin-bottom: 1.6rem;
 }
 
 .search-box>.icon {
     background: transparent;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--c-dark-o6);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.search-box>input[type="search"] {
+.search-box input[type="search"] {
     appearance: none;
     outline: none;
     border: none;
@@ -177,7 +177,7 @@ select.ng-touched.ng-invalid {
 
 .outline {
     margin-top: 1.6rem;
-    border: 1px solid var(--c-dark-o6);
+    border: 1px solid var(--c-brand-dark-o6);
     padding: 1.6rem;
     border-radius: 1.6rem;
     height: 40rem;
@@ -200,7 +200,7 @@ select.ng-touched.ng-invalid {
 .user-list .item {
     padding: 1.6rem;
     background-color: var(--c-brand-o2);
-    border: 1px solid var(--c-dark-o8);
+    border: 1px solid var(--c-brand-dark-o8);
     border-radius: 1.6rem;
     display: flex;
     align-items: center;
@@ -222,19 +222,19 @@ select.ng-touched.ng-invalid {
 .user-list .item .user-name {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--c-dark);
+    color: var(--c-brand-dark);
 }
 
 .user-list .item .user-type {
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--c-dark-o8);
+    color: var(--c-brand-dark-o8);
 }
 
 .user-list .item .user-data {
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--c-dark-o8);
+    color: var(--c-brand-dark-o8);
     align-self: center;
 }
 
@@ -247,24 +247,23 @@ select.ng-touched.ng-invalid {
     font-weight: 600;
 }
 
+.filters label {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.filters #filter-user-type {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+}
+
 .fade-in {
     opacity: 1;
     transform: translateY(0);
     animation-name: fade-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-}
-
-.filters {
-    display: flex;
-    gap: 0.8rem;
-    margin-top: 1.6rem;
-}
-
-.filters select {
-    border: none;
-    outline: none;
-    font-size: 1.4rem;
 }
 
 @keyframes fade-in {

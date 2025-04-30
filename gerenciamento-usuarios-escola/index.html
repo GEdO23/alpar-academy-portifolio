@@ -44,13 +44,14 @@
         </div>
         <article class="users container" ng-controller="ListaDeAlunosController">
             <h2 class="title">Usuários</h2>
-            <div class="search-box">
-                <span class="material-symbols-outlined icon">search</span>
-                <input ng-model="filtro" type="search" placeholder="Pesquisar...">
-            </div>
             <div class="filters">
-                <select ng-model="filtroTipo" class="filter-user-type-list">
-                    <option value="">Tipo</option>
+                <div class="search-box">
+                    <span class="material-symbols-outlined icon">search</span>
+                    <input ng-model="filtro" type="search" placeholder="Pesquisar...">
+                </div>
+                <label for="filter-user-type">Tipo:</label>
+                <select ng-model="filtroTipo" id="filter-user-type">
+                    <option value="">Todos</option>
                     <option value="Professor">Professor</option>
                     <option value="Aluno">Aluno</option>
                 </select>
