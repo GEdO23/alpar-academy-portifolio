@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="GEdO">
+    <meta name="description"
+        content="Veja a previsão do tempo para sua cidade. Informações em tempo real sobre chuva, temperatura e mudanças no clima! Criado com AngularJS.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do tempo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="icon" href="./assets/imgs/favicon.png" type="image/x-icon" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="WeatherController">
+    <div class="card" ng-class="{'active': isCardActive}">
+        <h1>{{ cityName }}</h1>
+        <img ng-if="iconUrl" id="weather-icon" src="{{iconUrl}}" alt="{{iconAlt}}">
+        <h2 class="temperature"><span>{{ temperature }}º</span></h2>
+        <p class="feels-like">Sensação térmica de <span>{{ feelsLike }}º</span></p>
+        <div class="min-max">
+            <p>Min: <span class="min">{{ minTemperature }}º</span></p>
+            <p>Max: <span class="max">{{ maxTemperature }}º</span></p>
+        </div>
+        <p class="humidity">Umidade: <span>{{ humidity }}%</span></p>
+        <div class="wind">
+            <img class="wind-icon" src="./assets/imgs/arrow.png" alt="Seta apontando para a direção do vento"
+                loading="lazy" ng-style="{ 'transform': 'rotate('+windOrientation+'deg)'}">
+            <p class="wind-speed">Velocidade do vento: <span>{{ windVelocity }}m/s</span></p>
+        </div>
+    </div>
+    <section class="input-section">
+        <input id="city-input" type="text" placeholder="Busque uma cidade" ng-model="city">
+        <button id="btn-search-city" type="button" ng-click="callApy()">Buscar</button>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
