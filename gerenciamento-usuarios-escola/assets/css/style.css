@@ -13,6 +13,7 @@
     --c-brand-dark-o8: rgba(45, 18, 2, 0.8);
     --c-brand-dark-o6: rgba(45, 18, 2, 0.6);
     --c-brand: #ff9554;
+    --c-brand-hover: #e27b3b;
     --c-brand-o2: rgba(255, 149, 84, 0.2);
     --c-danger: #B41A1A;
     --c-danger-o2: rgba(180, 26, 26, 0.2);
@@ -27,15 +28,18 @@ body {
     overflow-x: hidden;
 }
 
-.danger {
-    color: var(--c-danger);
+.container {
+    max-width: 120rem;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
 }
 
-input.ng-dirty.ng-invalid,
-select.ng-touched.ng-invalid {
-    border: 2px solid var(--c-danger);
-    background-color: var(--c-danger-o2);
-    color: var(--c-light);
+.icon {
+    user-select: none;
+}
+
+.icon-btn {
+    cursor: pointer;
 }
 
 .message {
@@ -46,6 +50,9 @@ select.ng-touched.ng-invalid {
     align-items: center;
     justify-content: space-between;
     border-radius: 0.8rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
 }
 
 .message .icon {
@@ -56,40 +63,32 @@ select.ng-touched.ng-invalid {
     background-color: var(--c-brand-o2);
     margin-bottom: 3.2rem;
     color: var(--c-brand-dark);
-}
-
-.success-message {
-    background-color: var(--c-success-light);
-    margin-top: 1.6rem;
-    color: var(--c-success-dark);
+    border-color: var(--c-dark-o8);
 }
 
 .welcome-message .icon {
     color: var(--c-brand-dark);
 }
 
+.success-message {
+    background-color: var(--c-success-light);
+    margin-top: 1.6rem;
+    color: var(--c-success-dark);
+    border-color: var(--c-success-dark);
+}
+
 .success-message .icon {
     color: var(--c-success-dark);
 }
 
-.container {
-    max-width: 120rem;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-}
-
-.title {
-    font-size: 2.4rem;
-    font-weight: 400;
-    margin-bottom: 3.2rem;
+.danger {
+    color: var(--c-danger);
 }
 
 .btn {
     padding: 0.8rem 1.6rem;
     border: none;
     outline: none;
-    color: var(--c-brand-dark);
-    background-color: var(--c-brand);
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 600;
@@ -101,8 +100,63 @@ select.ng-touched.ng-invalid {
     opacity: 0.5;
 }
 
-.icon {
-    user-select: none;
+.btn-primary {
+    color: var(--c-brand-dark);
+    background-color: var(--c-brand);
+}
+
+.btn-primary:not(:disabled):hover {
+    background-color: var(--c-brand-hover);
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+}
+
+.outline {
+    margin-top: 1.6rem;
+    border: 1px solid var(--c-brand-dark-o6);
+    padding: 1.6rem;
+    border-radius: 1.6rem;
+    height: 40rem;
+    overflow-y: scroll;
+}
+
+.search-box {
+    border: 1px solid var(--c-dark-o6);
+    border-radius: 6.4rem;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    position: relative;
+    padding: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.search-box>.icon {
+    background: transparent;
+    color: var(--c-dark-o6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-box input[type="search"] {
+    appearance: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+input.ng-dirty.ng-invalid,
+select.ng-touched.ng-invalid {
+    border: 2px solid var(--c-danger);
+    background-color: var(--c-danger-o2);
+    color: var(--c-light);
 }
 
 #header {
@@ -147,51 +201,7 @@ select.ng-touched.ng-invalid {
     padding: 0 3.2rem;
 }
 
-.search-box {
-    border: 1px solid var(--c-dark-o6);
-    border-radius: 6.4rem;
-    display: flex;
-    gap: 0.8rem;
-    align-items: center;
-    position: relative;
-    padding: 1.6rem;
-    margin-bottom: 1.6rem;
-}
-
-.search-box>.icon {
-    background: transparent;
-    color: var(--c-dark-o6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.search-box input[type="search"] {
-    appearance: none;
-    outline: none;
-    border: none;
-    width: 100%;
-    font-size: 1.4rem;
-}
-
-.outline {
-    margin-top: 1.6rem;
-    border: 1px solid var(--c-brand-dark-o6);
-    padding: 1.6rem;
-    border-radius: 1.6rem;
-    height: 40rem;
-    overflow-y: scroll;
-}
-
 .user-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-}
-
-.user-list-footer {
-    margin-top: 1.6rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -201,7 +211,7 @@ select.ng-touched.ng-invalid {
     padding: 1.6rem;
     background-color: var(--c-brand-o2);
     border: 1px solid var(--c-brand-dark-o8);
-    border-radius: 1.6rem;
+    border-radius: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -216,7 +226,20 @@ select.ng-touched.ng-invalid {
 
 .user-list .item .trailing-info {
     display: flex;
-    gap: 3.2rem;
+    gap: 1.6rem;
+}
+
+.user-list .item:hover .trailing-info .icon-btn {
+    opacity: 0.5;
+}
+
+.user-list .item .trailing-info .icon-btn:hover {
+    opacity: 1;
+}
+
+.user-list .item .trailing-info .icon-btn {
+    opacity: 0;
+    transition: 0.2s;
 }
 
 .user-list .item .user-name {
@@ -228,14 +251,20 @@ select.ng-touched.ng-invalid {
 .user-list .item .user-type {
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--c-brand-dark-o8);
+    color: var(--c-brand-dark);
 }
 
 .user-list .item .user-data {
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--c-brand-dark-o8);
-    align-self: center;
+}
+
+.user-list-footer {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 .user-list-footer .users-total>p {
@@ -256,24 +285,4 @@ select.ng-touched.ng-invalid {
     border: none;
     outline: none;
     font-size: 1.4rem;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    animation-name: fade-in;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(-4.8rem);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
