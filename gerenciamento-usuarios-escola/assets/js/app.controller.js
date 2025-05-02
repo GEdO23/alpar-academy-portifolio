@@ -1,12 +1,17 @@
 // @ts-nocheck
 
-window.app.controller('AppController', function ($scope, UsuarioService) {
+window.app.controller('AppController', function ($scope, $timeout, UsuarioService) {
     $scope.greetings = 'Bem-vindo ao sistema de cadastro escolar';
     $scope.isGreetingsVisible = true;
     $scope.isSuccessMessageVisible = false;
+    $scope.greetingsAnimation = true;
 
     $scope.closeGreetings = () => {
-        $scope.isGreetingsVisible = false;
+        $scope.greetingsAnimation = false;
+
+        $timeout(() => {
+            $scope.isGreetingsVisible = false;
+        }, 1000);
     };
 
     $scope.usuario = {
@@ -26,11 +31,16 @@ window.app.controller('AppController', function ($scope, UsuarioService) {
 
     $scope.showSuccessMessage = (message) => {
         $scope.isSuccessMessageVisible = true;
+        $scope.successAnimation = true;
         $scope.success = message;
     };
 
     $scope.hideSuccessMessage = () => {
-        $scope.isSuccessMessageVisible = false;
+        $scope.successAnimation = false;
+
+        $timeout(() => {
+            $scope.isSuccessMessageVisible = false;
+        }, 1000);
     };
 
     $scope.isLoading = false;
@@ -71,5 +81,4 @@ window.app.controller('AppController', function ($scope, UsuarioService) {
         form.$setPristine();
         form.$setUntouched();
     }
-
 });

@@ -10,6 +10,7 @@
 
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="./assets/css/modal.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/animations.css" rel="stylesheet" type="text/css" />
 
     <link rel="icon" href="" type="image/x-icon" />
 
@@ -38,9 +39,10 @@
     </header>
 
     <main id="main">
-        <div ng-if="isGreetingsVisible" class="message welcome-message container fade-in">
+        <div class="message welcome-message container" ng-if="isGreetingsVisible" ng-click="closeGreetings()"
+            ng-class="{ 'fade-in': greetingsAnimation, 'fade-out': !greetingsAnimation }">
             {{ greetings }}
-            <span class="material-symbols-outlined icon" ng-click="closeGreetings()">close</span>
+            <span class="material-symbols-outlined icon">close</span>
         </div>
         <article class="users container" ng-controller="ListaDeAlunosController">
             <h2 class="title">Usuários</h2>
@@ -56,7 +58,8 @@
                     <option value="Aluno">Aluno</option>
                 </select>
             </div>
-            <div ng-if="isSuccessMessageVisible" class="message success-message fade-in">
+            <div ng-if="isSuccessMessageVisible" class="message success-message"
+                ng-class="{ 'fade-in': successAnimation, 'fade-out': !successAnimation }">
                 {{ success }}
                 <span class="material-symbols-outlined icon" ng-click="hideSuccessMessage()">close</span>
             </div>
@@ -67,9 +70,12 @@
                         <div class="leading-info">
                             <p class="user-name" ng-bind="usuario.nome | uppercase">User name</p>
                             <p class="user-type" ng-bind="usuario.tipo">User type</p>
+                            <p class="user-data">
+                                Data de criação:
+                                <span ng-bind="usuario.dataCadastro | date: 'dd/MM/yyyy'">dd/MM/yyyy</sá>
+                            </p>
                         </div>
                         <div class="trailing-info">
-                            <p class="user-data" ng-bind="usuario.dataCadastro | date: 'dd/MM/yyyy'">dd/MM/yyyy</p>
                             <span ng-click="removerUsuario(usuario)"
                                 class="material-symbols-outlined icon icon-btn danger">delete</span>
                         </div>
@@ -78,7 +84,7 @@
             </div>
             <div class="user-list-footer">
                 <div style="width: 100%; display: flex; justify-content: space-between;">
-                    <button ng-click="activateModal()" type="button" class="btn">Adicionar</button>
+                    <button ng-click="activateModal()" type="button" class="btn btn-primary">Adicionar</button>
                     <div class="users-total">
                         <p>
                             Total de Professores:
@@ -122,7 +128,7 @@
                     </select>
                     <span ng-if="form.tipo.$touched && form.tipo.$invalid">O tipo de usuário é obrigatório</span>
                 </label>
-                <button class="btn send" type="submit" ng-disabled="!form.$valid || isLoading">
+                <button class="btn btn-primary send" type="submit" ng-disabled="!form.$valid || isLoading">
                     <span style="display: flex; align-items: center; justify-content: center; gap: 0.8rem;">
                         <img ng-if="isLoading" src="./assets/imgs/Loading_icon.webp" role="img"
                             style="width: 1.6rem; height: 1.6rem;">

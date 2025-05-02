@@ -34,9 +34,6 @@ window.app.service('UsuarioService', function () {
         }
     ];
 
-    function delay(ms) {
-    }
-
     return {
         listar() {
             return usuarios;
