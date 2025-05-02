@@ -73,7 +73,7 @@
         {
             "link": {
                 "href": "./previsao/",
-                "title": "Previsão"
+                "title": "Previsão do Clima"
             },
             "cover": {
                 "src": "./assets/imgs/project-covers/previsao-cover.webp",
@@ -128,6 +128,26 @@
             "cover": {
                 "src": "./assets/imgs/project-covers/gerenciamento_usuarios_escola-cover.webp",
                 "alt": "Gerenciamento de Usuarios de uma Escola em AngularJS"
+            }
+        },
+        {
+            "link": {
+                "href": "./lista-tarefas/",
+                "title": "Lista de Tarefas"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/lista_tarefas-cover.webp",
+                "alt": "Lista de Tarefas em AngularJS"
+            }
+        },
+        {
+            "link": {
+                "href": "./previsao-angular/",
+                "title": "Previsão do Clima em AngularJS"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/previsao_angular-cover.webp",
+                "alt": "Previsão do Clima em AngularJS"
             }
         }
     ]
