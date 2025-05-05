@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="GEdO">
+    <meta name="description" content="Página de formulário com validação regex.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação Regex</title>
+
+    <link rel="stylesheet" href="./assets/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>Formulário de usuário</h1>
+        <h2>Validando campos utilizando regex</h2>
+    </header>
+
+    <main id="main">
+        <form id="user-form" class="form form-validate">
+            <div class="input-group">
+                <label class="label" for="user-name">Nome</label>
+                <input id="user-name" class="input" type="text" data-input-type="username">
+                <small class="validation-message"></small>
+            </div>
+            <div class="input-group">
+                <label class="label" for="user-email">Email</label>
+                <input id="user-email" class="input" type="email" placeholder="user@domain.com" data-input-type="email">
+                <small class="validation-message"></small>
+            </div>
+            <div class="input-group">
+                <label class="label" for="user-cpf">CPF</label>
+                <input id="user-cpf" class="input" type="text" placeholder="000.000.000-00" data-input-type="cpf">
+                <small class="validation-message"></small>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-validate" type="button">Validar</button>
+                <button class="btn btn-primary btn-send" type="submit" disabled>Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
