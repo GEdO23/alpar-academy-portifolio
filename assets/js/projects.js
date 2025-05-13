@@ -105,13 +105,17 @@ class ProjectManager {
         await fetch(url)
             .then(response => response.json())
             .then(json => json.projects)
-            .then(data => data.forEach(proj => {
+            .then(data => data.forEach((proj, i) => {
+                if (!proj.link?.title || !proj.link?.href || !proj.cover?.src) {
+                    console.error(`Projeto nº${i + 1} não possui informações suficientes para ser criado.`);
+                    return;
+                }
+
                 const projectBuilder = new ProjectBuilder();
-                const newProject = projectBuilder
-                    .setName(proj.link.title)
-                    .setLink(proj.link.href)
-                    .setCover(proj.cover.src)
-                    .build();
+                projectBuilder.setName(proj.link.title);
+                projectBuilder.setLink(proj.link.href);
+                projectBuilder.setCover(proj.cover.src);
+                let newProject = projectBuilder.build();
                 this.#projects.push(newProject);
             }))
     }
