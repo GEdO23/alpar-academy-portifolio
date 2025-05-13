@@ -214,12 +214,13 @@ ul {
         width: 24rem;
         height: 13.5rem;
         border-radius: 0.8rem;
-        transform: translate(-5%, -5%) scale(90%);
+        transform: translate(-5%, -5%) scale(0.9);
         transition: transform 0.5s;
+        will-change: transform;
     }
 
     #project-list li img:hover {
-        transform: translate(0%, 0%) scale(100%);
+        transform: translate(0%, 0%) scale(1);
     }
 
     #footer {
