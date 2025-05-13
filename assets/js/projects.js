@@ -1,80 +1,152 @@
+const LOCALSTORAGE_PROJECT_KEY = 'portfolio_projects';
+const DEFAULT_COVER_SOURCE_PATH = './assets/imgs/project-covers/default-cover.png';
+
+
 class Project {
-    link;
-    cover;
-    constructor(link, cover) {
-        this.link = link;
-        this.cover = cover;
+    #name;
+    #link;
+    #cover;
+
+    constructor(name, link, cover) {
+        this.#name = name;
+        this.#link = link;
+        this.#cover = cover;
+    }
+
+    get name() { return this.#name; }
+    get link() { return this.#link; }
+    get cover() { return this.#cover; }
+
+    set name(name) { this.#name = name; }
+    set link(link) { this.#link = link; }
+    set cover(cover) { this.#cover = cover; }
+
+    toJSON() {
+        return {
+            name: this.#name,
+            link: this.#link,
+            cover: this.#cover
+        };
     }
 }
 
-class ProjectList {
-    static instance;
-    static projects = [];
+
+class ProjectBuilder {
+    #project;
 
     constructor() {
-        ProjectList.instance = this;
+        this.#project = new Project('', '#', DEFAULT_COVER_SOURCE_PATH);
+    }
+
+    setName(name) {
+        this.#project.name = name;
+        return this;
+    }
+
+    setLink(link) {
+        this.#project.link = link;
+        return this;
+    }
+
+    setCover(src) {
+        this.#project.cover = src;
+        return this;
+    }
+
+    build() {
+        return this.#project;
+    }
+
+    buildHTML() {
+        const baseElement = document.createElement('li');
+
+        const linkElement = document.createElement('a');
+        linkElement.href = this.#project.link;
+        linkElement.target = '_self';
+
+        const coverElement = document.createElement('img');
+        coverElement.src = this.#project.cover;
+        coverElement.alt = this.#project.name;
+        coverElement.loading = 'lazy';
+
+        linkElement.appendChild(coverElement);
+        baseElement.appendChild(linkElement);
+        return baseElement;
+    }
+}
+
+
+class ProjectManager {
+    static instance;
+    #projects;
+
+    constructor() {
+        ProjectManager.instance = this;
+        this.#projects = [];
     }
 
     static getInstance() {
-        if (!ProjectList.instance) {
-            new ProjectList();
+        if (!ProjectManager.instance) {
+            return new ProjectManager();
         }
-        return ProjectList.instance;
-    }
-
-    async fetchData() {
-        const jsonFileLocation = './assets/db/projects.json';
-
-        await fetch(jsonFileLocation)
-            .then(response => response.json())
-            .then(json => json.projects)
-            .then(projects => projects.forEach(
-                proj => {
-                    const newProject = new Project(proj.link, proj.cover);
-                    ProjectList.projects.push(newProject);
-                })
-            )
-    }
-
-    saveAll() {
-        localStorage.setItem('portfolio_projects', JSON.stringify(ProjectList.projects));
+        return ProjectManager.instance;
     }
 
     get projects() {
-        const data = localStorage.getItem('portfolio_projects');
+        const data = localStorage.getItem(LOCALSTORAGE_PROJECT_KEY);
         if (!data) throw new Error('Projetos não encontrados');
+        console.log(data);
+        console.log(JSON.parse(data));
+
         return JSON.parse(data);
     }
 
-    display() {
-        const listId = 'project-list';
-        const listEl = document.getElementById(listId);
+    async #fetchProjectsFromJsonFile(url) {
+        await fetch(url)
+            .then(response => response.json())
+            .then(json => json.projects)
+            .then(data => data.forEach(proj => {
+                const projectBuilder = new ProjectBuilder();
+                const newProject = projectBuilder
+                    .setName(proj.link.title)
+                    .setLink(proj.link.href)
+                    .setCover(proj.cover.src)
+                    .build();
+                this.#projects.push(newProject);
+            }))
+    }
+
+    #saveAllProjectsOnLocalStorage(key, projects) {
+        localStorage.setItem(key, JSON.stringify(projects));
+    }
+
+    #display(listElementId) {
+        const listEl = document.getElementById(listElementId);
         if (!listEl) throw new Error('Elemento de lista de projetos não encontrado.');
 
-        this.projects.forEach(proj => {
-            const newItemEl = document.createElement('li');
-            const projAnchorEl = document.createElement('a');
-            projAnchorEl.href = proj.link.href;
-            projAnchorEl.title = proj.link.title;
-            projAnchorEl.target = '_self';
-
-            const projCoverEl = document.createElement('img');
-            projCoverEl.src = proj.cover.src;
-            projCoverEl.alt = proj.cover.alt;
-            projCoverEl.loading = 'lazy';
-
-            projAnchorEl.appendChild(projCoverEl);
-            newItemEl.appendChild(projAnchorEl)
-            listEl.appendChild(newItemEl);
+        this.#projects.forEach(proj => {
+            const projectBuilder = new ProjectBuilder();
+            const projectElement = projectBuilder
+                .setName(proj.name)
+                .setLink(proj.link)
+                .setCover(proj.cover)
+                .buildHTML();
+            listEl.appendChild(projectElement);
         })
     }
 
     async load() {
-        await this.fetchData();
-        this.saveAll();
-        this.display();
+        const projectsDataUrl = './assets/db/projects.json';
+        await this.#fetchProjectsFromJsonFile(projectsDataUrl);
+
+        const localStorageKey = LOCALSTORAGE_PROJECT_KEY;
+        this.#saveAllProjectsOnLocalStorage(localStorageKey, this.#projects);
+
+        const listElementId = 'project-list';
+        this.#display(listElementId);
     }
 }
 
-const projectList = new ProjectList();
-projectList.load();
+
+const projectManager = new ProjectManager();
+projectManager.load();
