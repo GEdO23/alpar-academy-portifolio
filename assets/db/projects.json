@@ -149,6 +149,16 @@
                 "src": "./assets/imgs/project-covers/previsao_angular-cover.webp",
                 "alt": "Previsão do Clima em AngularJS"
             }
+        },
+        {
+            "link": {
+                "href": "https://github.com/SenaNilo/DesafioFullStack-LojaVirtual",
+                "title": "Loja Virtual"
+            },
+            "cover": {
+                "src": "./assets/imgs/project-covers/loja_virtual-cover.webp",
+                "alt": "Loja Virtual"
+            }
         }
     ]
 }
