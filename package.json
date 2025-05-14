@@ -15,6 +15,10 @@
     "email": "gabriel.eringer.23@gmail.com",
     "url": "https://github.com/GEdO23"
   },
-  "type": "module",
-  "main": "index.js"
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.88.0"
+  }
 }
