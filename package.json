@@ -1,0 +1,20 @@
+{
+  "name": "alpar-academy-portfolio",
+  "version": "1.0.0",
+  "description": "Desafios de HTML e CSS, da 2ª edição do Programa Rocket, da empresa Alpar",
+  "bugs": {
+    "url": "https://github.com/GEdO23/AlparAcademy-Portifolio/issues",
+    "email": "gabriel.eringer.23@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GEdO23/AlparAcademy-Portifolio.git"
+  },
+  "author": {
+    "name": "GEdO",
+    "email": "gabriel.eringer.23@gmail.com",
+    "url": "https://github.com/GEdO23"
+  },
+  "type": "module",
+  "main": "index.js"
+}
