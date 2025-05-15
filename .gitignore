@@ -1,6 +1,8 @@
 # Node modules
 node_modules/
 
+.vscode/
+
 # Cypress artifacts
 cypress/videos/
 cypress/screenshots/
